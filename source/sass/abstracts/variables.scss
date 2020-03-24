@@ -1,11 +1,9 @@
-$content-width: 1560px;
-
 $mobile-width-min: 320px;
 $tablet-width-min: 768px;
-$desktop-width-min: 1024px;
+$desktop-width-min: 1200px;
 
 $mobile-width-max: $tablet-width-min - 1px;
-$tablet-width-max: $desktop-widt-min - 1px;
+$tablet-width-max: $desktop-width-min - 1px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
@@ -14,17 +12,21 @@ $desktop-fixed-padding: 75px;
 $desktop-flatten-padding: 192px;
 $desktop-percent-padding: 4.8%;
 $desktop-percent-flatten-padding: 12.3%;
-$tablet-padding: 3.3%;
+$tablet-padding: 6%;
 $mobile-padding: 5.2%;
 
-$main-font: "#", "Arial", sans-serif;
-$second-font: "#", "Arial", sans-serif;
-$description-font-color: #ffffff;
+$main-font: "Roboto Condensed Regular", "Arial", sans-serif;
+$second-font: "Bebas Neue Regular", "Arial", sans-serif;
+$description-font-color: #102654;
 
-$main-color: #ffffff;
+$main-color: #1c3374;
 $second-color: #ffffff;
-$second-background-color: #ffffff;
+$second-background-color: #ed0233;
 
 $transition-time: 0.3s;
 $active-state-opacity: 0.4;
 $hover-state-opacity: 0.7;
+
+$title-letter-spacing: 0.03em;
+$subtitle-font-size: 49px;
+$subtitle-line-height: 49px;

@@ -1,0 +1,51 @@
+.header-container {
+  background-color: #1e3476;
+  background-image: url("../img/header-background-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-container__social {
+  a {
+    @include link;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+  }
+}
+
+.webp .header-container {
+  background-image: url("../img/header-background-desktop.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/header-background-desktop@2x.webp");
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .header-container {
+    background-image: url("../header-background-tablet.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/header-background-tablet@2x.jpg");
+    }
+  }
+
+  .webp .header-container {
+    background-image: url("../img/header-background-tablet.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/header-background-tablet@2x.webp");
+    }
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .header-container {
+    background-image: url("../img/header-background-mobile.jpg");
+  }
+
+  .webp .header-container {
+    background-image: url("../img/header-background-mobile.webp");
+  }
+}

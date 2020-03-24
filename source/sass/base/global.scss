@@ -1,33 +1,41 @@
 @font-face {
   font-weight: normal;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue Regular";
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/BebasNeue-Regular.woff2") format("woff2"), url("../fonts/BebasNeue-Regular.woff") format("woff");
+  src: url("./../fonts/BebasNeue-Regular.woff2") format("woff2"), url("./../fonts/BebasNeue-Regular.woff") format("woff");
 }
 
 @font-face {
   font-weight: bold;
-  font-family: "Roboto Condensed";
+  font-family: "Bebas Neue Bold";
+  font-style: normal;
+  font-display: swap;
+  src: url("./../fonts/BebasNeue-Bold.woff2") format("woff2"), url("./../fonts/BebasNeue-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Roboto Condensed Bold";
   font-style: normal;
   font-display: swap;
   src: url("./../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("./../fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 
 @font-face {
-  font-weight: normal;
-  font-family: "Roboto Condensed";
+  font-weight: lighter;
+  font-family: "Roboto Condensed Light";
   font-style: normal;
   font-display: swap;
-  src: url("./../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("./../fonts/RobotoCondensed-Regular.woff") format("woff");
+  src: url("./../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("./../fonts/RobotoCondensed-Light.woff") format("woff");
 }
 
 @font-face {
   font-weight: normal;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed Regular";
   font-style: normal;
   font-display: swap;
-  src: url("./../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("./../fonts/RobotoCondensed-Light.woff") format("woff");
+  src: url("./../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("./../fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 
 html {
@@ -49,12 +57,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: $mobile-width;
+  min-width: $mobile-width-min;
   width: 100%;
   min-height: 100%;
   font-family: $main-font;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 150%;
   color: $second-color;
 }
 

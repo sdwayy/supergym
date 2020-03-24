@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px 0 20px;
+  font-family: $second-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+  line-height: 26px;
+
+  a {
+    @include link;
+  }
+}
+
+.header__logo {
+  letter-spacing: 0.02em;
+}
+
+.header__tel {
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: $tablet-width-max) {
+  .header {
+    padding: 40px $tablet-padding 18px $tablet-padding;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .header {
+    padding: 20px $mobile-padding;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
