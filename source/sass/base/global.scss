@@ -1,0 +1,64 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/BebasNeue-Regular.woff2") format("woff2"), url("../fonts/BebasNeue-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-display: swap;
+  src: url("./../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("./../fonts/RobotoCondensed-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-display: swap;
+  src: url("./../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("./../fonts/RobotoCondensed-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-display: swap;
+  src: url("./../fonts/RobotoCondensed-Light.woff2") format("woff2"), url("./../fonts/RobotoCondensed-Light.woff") format("woff");
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: $mobile-width;
+  width: 100%;
+  min-height: 100%;
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 22px;
+  color: $second-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

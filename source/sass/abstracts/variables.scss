@@ -1,0 +1,30 @@
+$content-width: 1560px;
+
+$mobile-width-min: 320px;
+$tablet-width-min: 768px;
+$desktop-width-min: 1024px;
+
+$mobile-width-max: $tablet-width-min - 1px;
+$tablet-width-max: $desktop-widt-min - 1px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$desktop-fixed-padding: 75px;
+$desktop-flatten-padding: 192px;
+$desktop-percent-padding: 4.8%;
+$desktop-percent-flatten-padding: 12.3%;
+$tablet-padding: 3.3%;
+$mobile-padding: 5.2%;
+
+$main-font: "#", "Arial", sans-serif;
+$second-font: "#", "Arial", sans-serif;
+$description-font-color: #ffffff;
+
+$main-color: #ffffff;
+$second-color: #ffffff;
+$second-background-color: #ffffff;
+
+$transition-time: 0.3s;
+$active-state-opacity: 0.4;
+$hover-state-opacity: 0.7;
