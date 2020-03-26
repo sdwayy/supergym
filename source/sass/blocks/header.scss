@@ -19,11 +19,21 @@
 
 .header__tel {
   letter-spacing: 0.03em;
+
+  &:hover {
+    opacity: $hover-state-opacity;
+    transition: $transition-time;
+  }
+
+  &:active {
+    opacity: $active-state-opacity;
+    transition: $transition-time;
+  }
 }
 
 @media (max-width: $tablet-width-max) {
   .header {
-    padding: 40px $tablet-padding 18px $tablet-padding;
+    padding: 40px $tablet-padding 22px $tablet-padding;
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.02em;

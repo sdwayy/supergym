@@ -8,7 +8,7 @@ $tablet-width-max: $desktop-width-min - 1px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-$desktop-fixed-padding: 75px;
+$desktop-fixed-padding: 80px;
 $desktop-flatten-padding: 192px;
 $desktop-percent-padding: 4.8%;
 $desktop-percent-flatten-padding: 12.3%;
@@ -24,8 +24,8 @@ $second-color: #ffffff;
 $second-background-color: #ed0233;
 
 $transition-time: 0.3s;
-$active-state-opacity: 0.4;
-$hover-state-opacity: 0.7;
+$active-state-opacity: 0.6 easy-out;
+$hover-state-opacity: 0.8;
 
 $title-letter-spacing: 0.03em;
 $subtitle-font-size: 49px;

@@ -2,10 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding-top: 117px;
-  padding-bottom: 72px;
+  padding-bottom: 95px;
   padding-right: 15px;
   padding-left: 40px;
-  background-image: url("../img/promo-photo.jpg");
   background-repeat: no-repeat;
   background-size: 500px 556px;
   background-position: right 220px top -5px;
@@ -13,6 +12,18 @@
   a {
     @include link;
   }
+}
+
+.webp .promo {
+  background-image: url("../img/promo-photo.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/promo-photo@2x.webp");
+  }
+}
+
+.no-webp .promo {
+  background-image: url("../img/promo-photo.jpg");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/promo-photo@2x.jpg");
@@ -75,22 +86,35 @@
   &:last-of-type {
     margin-bottom: 0;
   }
-}
 
-.webp .promo {
-  background-image: url("../img/promo-photo.webp");
+  &:hover {
+    opacity: $hover-state-opacity;
+    transition: $transition-time;
+  }
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/promo-photo@2x.webp");
+  &:active {
+    opacity: $active-state-opacity;
+    transition: $transition-time;
   }
 }
 
 @media (max-width: $tablet-width-max) {
   .promo {
     padding: 57px $tablet-padding 103px $tablet-padding;
-    background-image: url("../img/promo-photo-tablet.jpg");
     background-size: 324px 390px;
     background-position: left calc(300px + 22%) top;
+  }
+
+  .webp .promo {
+    background-image: url("../img/promo-photo-tablet.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/promo-photo-tablet@2x.webp");
+    }
+  }
+
+  .no-webp .promo {
+    background-image: url("../img/promo-photo-tablet.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/promo-photo-tablet@2x.jpg");
@@ -124,14 +148,6 @@
   .promo__social {
     @include visually-hidden;
   }
-
-  .webp .promo {
-    background-image: url("../img/promo-photo-tablet.webp");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/promo-photo-tablet@2x.webp");
-    }
-  }
 }
 
 @media (max-width: $mobile-width-max) {
@@ -140,7 +156,6 @@
     padding-left: 3.6%;
     padding-right: 3.6%;
     padding-bottom: 80px;
-    background-image: none;
 
     h1 {
       font-size: 78px;
@@ -164,6 +179,10 @@
   }
 
   .webp .promo {
+    background-image: none;
+  }
+
+  .no-webp .promo {
     background-image: none;
   }
 }

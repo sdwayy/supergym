@@ -7,8 +7,27 @@
   font-weight: bold;
   line-height: 14px;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
 
   &--second-style {
     border: 4px solid $second-color;
+
+    &:hover {
+      opacity: $hover-state-opacity;
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+    }
+  }
+
+  &--main-style {
+    outline: 2px solid #102654;
+  }
+
+  &:hover,
+  &:active {
+    transition: $transition-time;
   }
 }
