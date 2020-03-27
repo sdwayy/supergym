@@ -117,16 +117,20 @@
 
   h3 + span {
     font-size: 16px;
-    margin-bottom: 90px;
+    margin-bottom: 100px;
   }
 
   span:last-of-type {
     position: relative;
-    margin-bottom: 59px;
+    margin-bottom: 65px;
     font-size: 60px;
     font-weight: bold;
     color: #103aae;
     z-index: 1;
+
+    span {
+      color: #102654;
+    }
 
     &::before {
       content: attr(data-price);
@@ -265,7 +269,7 @@
 
   .subscriptions__list {
     li {
-      margin-bottom: 35px;
+      margin-bottom: 40px;
     }
   }
 
@@ -279,7 +283,7 @@
     }
 
     h3 + span {
-      margin-bottom: 70px;
+      margin-bottom: 75px;
     }
 
     span:last-of-type {
@@ -290,11 +294,6 @@
         top: -60px;
         font-size: 80px;
         line-height: 120px;
-      }
-
-      svg {
-        width: 24px;
-        height: 33px;
       }
     }
   }

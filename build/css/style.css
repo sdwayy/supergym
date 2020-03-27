@@ -910,14 +910,16 @@ template {
     line-height: 29px; }
   .subscriptions__list-item h3 + span {
     font-size: 16px;
-    margin-bottom: 90px; }
+    margin-bottom: 100px; }
   .subscriptions__list-item span:last-of-type {
     position: relative;
-    margin-bottom: 59px;
+    margin-bottom: 65px;
     font-size: 60px;
     font-weight: bold;
     color: #103aae;
     z-index: 1; }
+    .subscriptions__list-item span:last-of-type span {
+      color: #102654; }
     .subscriptions__list-item span:last-of-type::before {
       content: attr(data-price);
       position: absolute;
@@ -1011,7 +1013,7 @@ template {
     .subscriptions__durations span {
       padding-bottom: 13px; }
   .subscriptions__list li {
-    margin-bottom: 35px; }
+    margin-bottom: 40px; }
   .subscriptions__list-item {
     width: 100%;
     padding-top: 40px;
@@ -1019,14 +1021,11 @@ template {
     .subscriptions__list-item h3 {
       font-size: 22px; }
     .subscriptions__list-item h3 + span {
-      margin-bottom: 70px; }
+      margin-bottom: 75px; }
     .subscriptions__list-item span:last-of-type {
       margin-bottom: 52px;
       font-size: 48px; }
       .subscriptions__list-item span:last-of-type::before {
         top: -60px;
         font-size: 80px;
-        line-height: 120px; }
-      .subscriptions__list-item span:last-of-type svg {
-        width: 24px;
-        height: 33px; } }
+        line-height: 120px; } }
