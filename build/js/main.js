@@ -9,7 +9,9 @@ if (subscriptionsListItems.length > 0) {
     subscriptionsItemIndex++
   ) {
     var currentItem = subscriptionsListItems[subscriptionsItemIndex];
-    var price = currentItem.querySelector('span:last-of-type');
-    price.dataset.price = price.textContent.trim();
+    var priceBlock = currentItem.querySelector('span:last-of-type');
+    var priceBlockContent = priceBlock.textContent.trim();
+    var price = priceBlockContent.slice(0, priceBlockContent.length - 2);
+    priceBlock.dataset.price = price;
   }
 }
