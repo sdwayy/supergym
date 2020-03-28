@@ -3,10 +3,14 @@
 @import "./base/global";
 @import "./base/normalize";
 @import "./base/visually-hidden";
+@import "./vendor/swiper";
 @import "./grid/wrapper";
+@import "./grid/page-main";
 @import "./components/btn";
 @import "./blocks/header-container";
 @import "./blocks/header";
 @import "./blocks/promo";
 @import "./blocks/gym-description";
 @import "./blocks/subscriptions";
+@import "./blocks/event";
+@import "./blocks/trainers";

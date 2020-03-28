@@ -31,3 +31,11 @@
     transition: $transition-time;
   }
 }
+
+@media (max-width: $tablet-width-max) {
+  .btn {
+    &--second-style {
+      border: 2px solid $second-color;
+    }
+  }
+}

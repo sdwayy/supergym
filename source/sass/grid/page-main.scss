@@ -1,0 +1,27 @@
+.page-main__subscriptions {
+  margin-bottom: 130px;
+}
+
+.page-main__event {
+  margin-bottom: 120px;
+}
+
+@media (max-width: $tablet-width-max) {
+  .page-main__subscriptions {
+    margin-bottom: 102px;
+  }
+
+  .page-main__event {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .page-main__subscriptions {
+    margin-bottom: 67px;
+  }
+
+  .page-main__event {
+    margin-bottom: 73px;
+  }
+}

@@ -9,7 +9,6 @@
     right: 0;
     width: 360px;
     height: 490px;
-    background-image: url("../img/weights.png");
     background-size: 287px 494px;
     background-position: right bottom 16px;
     background-repeat: no-repeat;
@@ -135,7 +134,7 @@
     &::before {
       content: attr(data-price);
       position: absolute;
-      top: -15px;
+      top: -25px;
       left: 50%;
       font-size: 100px;
       color: rgba(232, 232, 232, 0.5);
@@ -200,7 +199,7 @@
 
   .subscriptions__wrapper {
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
 
     h2 {
       font-size: 42px;
@@ -213,7 +212,7 @@
     align-items: center;
 
     li {
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
   }
 

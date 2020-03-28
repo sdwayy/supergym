@@ -1,0 +1,246 @@
+.trainers {
+  position: relative;
+  padding-bottom: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-family: $second-font;
+    font-size: $subtitle-font-size;
+    line-height: $subtitle-line-height;
+    letter-spacing: $title-letter-spacing;
+    color: $description-font-color;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--no-js {
+    .trainers__btn-arrow {
+      display: none;
+    }
+  }
+}
+
+.trainers__list-container {
+  position: relative;
+  height: 294px;
+}
+
+.trainers__list {
+  @include list;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  .trainers--no-js & {
+    position: unset;
+    flex-wrap: wrap;
+  }
+}
+
+.trainers__btn-arrow {
+  width: 20px;
+  height: 32px;
+  top: 52.5%;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  transform: translateY(-52.5%);
+
+  &--left {
+    left: -37px;
+  }
+
+  &--right {
+    right: -37px;
+  }
+}
+
+.trainers__card {
+  position: relative;
+  flex-shrink: 0;
+  min-height: 294px;
+  width: 260px;
+  margin-right: 40px;
+  padding-top: 247px;
+  padding-right: 0;
+
+  &:hover {
+    & > h3 {
+      z-index: 0;
+    }
+
+    .trainers__description {
+      z-index: 0;
+    }
+  }
+
+  & > h3 {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .trainers--no-js & {
+    margin-bottom: 20px;
+
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.trainers__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  height: 100%;
+  padding-top: 55px;
+  background-color: rgba(16, 38, 84, 0.89);
+  z-index: -1;
+
+  h3 {
+    margin: 0;
+  }
+
+  h3 + span {
+    margin-bottom: 30px;
+    color: #b6bdcc;
+  }
+}
+
+.trainers__achievements {
+  font-size: 14px;
+  line-height: 21px;
+
+  li {
+    margin-bottom: 13px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .trainers {
+    text-align: center;
+
+    h2 {
+      font-size: 42px;
+      line-height: 42px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .trainers__list-container {
+    width: 565px;
+  }
+
+  .trainers__achievements {
+    padding-left: 70px;
+    padding-right: 20px;
+
+    li {
+      text-align: left;
+    }
+  }
+
+  .trainers__btn-arrow {
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--left {
+      left: 45px;
+    }
+
+    &--right {
+      right: 45px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .trainers {
+    h2 {
+      margin-bottom: 45px;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    img {
+      width: 226px;
+      height: 274px;
+    }
+  }
+
+  .trainers__list-container {
+    width: 226px;
+    height: 274px;
+  }
+
+  .trainers__description {
+    width: 226px;
+    padding-top: 38px;
+
+    h3 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    h3 + span {
+      margin-bottom: 31px;
+      color: #b6bdcc;
+    }
+  }
+
+  .trainers__achievements {
+    padding-left: 50px;
+    font-size: 14px;
+    line-height: 21px;
+
+    li {
+      margin-bottom: 13px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .trainers__card {
+    min-height: 274px;
+  }
+
+  .trainers__btn-arrow {
+    top: 47.5%;
+    width: 12px;
+    height: 25px;
+    transform: translateY(-47.5%);
+
+    &--left {
+      left: 15px;
+    }
+
+    &--right {
+      right: 15px;
+    }
+
+    svg {
+      width: 12px;
+      height: 25px;
+    }
+  }
+}
