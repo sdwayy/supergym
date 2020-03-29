@@ -1071,9 +1071,6 @@ button.swiper-pagination-bullet {
     color: #ffffff;
     text-decoration: none; }
 
-.header__logo {
-  letter-spacing: 0.02em; }
-
 .header__tel {
   letter-spacing: 0.03em; }
   .header__tel:hover {
@@ -1088,13 +1085,17 @@ button.swiper-pagination-bullet {
     padding: 40px 6% 22px 6%;
     font-size: 24px;
     line-height: 24px;
-    letter-spacing: 0.02em; } }
+    letter-spacing: 0.02em; }
+  .header__logo img {
+    width: 80px; } }
 
 @media (max-width: 767px) {
   .header {
     padding: 20px 5.2%;
     font-size: 20px;
-    line-height: 20px; } }
+    line-height: 20px; }
+  .header__logo img {
+    width: 65px; } }
 
 .promo {
   display: flex;
