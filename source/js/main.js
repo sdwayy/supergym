@@ -5,6 +5,7 @@ const trainersCards = document.querySelectorAll(`.trainers__card`);
 const trainers = document.querySelector(`.trainers`);
 const subscriptionsListItems = document.querySelectorAll(`.subscriptions__list-item`);
 const promoBtn = document.querySelector(`.promo__btn`);
+const reviews = document.querySelector(`.reviews`);
 
 const onAnchorClick = (anchor) => {
   const block = $(anchor).attr(`href`);
@@ -66,7 +67,6 @@ if (trainers) {
   });
 }
 
-
 if (trainersCards.length > 0) {
   for (const trainerCard of trainersCards) {
     const trainerName = trainerCard.querySelector(`h3`);
@@ -75,4 +75,21 @@ if (trainersCards.length > 0) {
 
     trainerDescription.prepend(trainerNameBlockCopy);
   }
+}
+
+if (reviews) {
+  reviews.classList.remove(`reviews--no-js`);
+
+  const reviewsSwiper = new Swiper(`.reviews__container`, {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+      el: `.swiper-pagination`,
+      clickable: true,
+    },
+    navigation: {
+      nextEl: `.reviews .swiper-button-next`,
+      prevEl: `.reviews .swiper-button-prev`,
+    },
+  });
 }

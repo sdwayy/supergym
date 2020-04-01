@@ -153,6 +153,7 @@
 
   &:hover,
   &:focus {
+    border-color: #d10a42;
     border-image: linear-gradient(140deg, #d10a42, #00359f);
     border-image-slice: 1;
     transition: $transition-time;
@@ -160,6 +161,7 @@
     a {
       color: $second-color;
       outline: none;
+      background-color: #ed0233;
       background-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
       transition: $transition-time;
     }

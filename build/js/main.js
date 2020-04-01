@@ -19953,6 +19953,7 @@ var trainersCards = document.querySelectorAll(".trainers__card");
 var trainers = document.querySelector(".trainers");
 var subscriptionsListItems = document.querySelectorAll(".subscriptions__list-item");
 var promoBtn = document.querySelector(".promo__btn");
+var reviews = document.querySelector(".reviews");
 
 var onAnchorClick = function onAnchorClick(anchor) {
   var block = jquery__WEBPACK_IMPORTED_MODULE_0___default()(anchor).attr("href");
@@ -20038,6 +20039,22 @@ if (trainersCards.length > 0) {
   } finally {
     _iterator2.f();
   }
+}
+
+if (reviews) {
+  reviews.classList.remove("reviews--no-js");
+  var reviewsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".reviews__container", {
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".reviews .swiper-button-next",
+      prevEl: ".reviews .swiper-button-prev"
+    }
+  });
 }
 
 /***/ })

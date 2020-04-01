@@ -26,3 +26,28 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@mixin more-details-link {
+  align-self: baseline;
+  margin-top: auto;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $second-color;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  font-family: "Roboto Condensed Bold";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-state-opacity;
+    transition: $transition-time;
+  }
+
+  &:active {
+    opacity: $active-state-opacity;
+    transition: $transition-time;
+  }
+}

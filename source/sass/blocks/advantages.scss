@@ -1,0 +1,280 @@
+.advantages {
+  padding-top: 120px;
+  color: $description-font-color;
+  background-color: #f8f9fc;
+
+  h2 {
+    margin: 0;
+    font-family: $second-font;
+    font-size: $subtitle-font-size;
+    line-height: $subtitle-line-height;
+    letter-spacing: $title-letter-spacing;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.advantages__content-container {
+  position: relative;
+  padding-right: 78px;
+  padding-left: 78px;
+  padding-bottom: 20px;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-right: calc(100% - 350px * 2);
+    margin-bottom: 13px;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+      padding-left: 110px;
+      padding-right: 10px;
+      background-size: 72px 72px;
+      background-position: left 10px top 65px;
+    }
+
+    &:last-of-type,
+    &:nth-last-of-type(2) {
+      border-bottom: none;
+    }
+  }
+}
+
+.advantages__list-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 350px;
+  padding-top: 60px;
+  padding-left: 165px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid rgba(209, 10, 66, 0.2);
+  background-position: left 30px top 65px;
+  background-size: 105px 71px;
+  background-repeat: no-repeat;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  p {
+    font-family: "Roboto Condensed Light";
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &--area {
+    background-image: url("../img/area.svg");
+  }
+
+  &--parking {
+    background-image: url("../img/parking.svg");
+  }
+
+  &--comfort {
+    background-image: url("../img/comfort.svg");
+  }
+
+  &--experience {
+    background-image: url("../img/experience.svg");
+  }
+}
+
+.advantages__center-item {
+  position: absolute;
+  top: 67px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: calc(100% - 60px - 15px - 110px);
+  border: none;
+  color: $second-color;
+  text-align: center;
+  background-color: #1c3374;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  h3 {
+    width: 100%;
+    margin: 0;
+    margin-top: -25px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 39px;
+
+    span {
+      font-size: 74px;
+      line-height: 111px;
+    }
+  }
+
+  p {
+    width: 75%;
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .advantages {
+    padding-top: 99px;
+    padding-bottom: 35px;
+
+    h2 {
+      margin-top: 0;
+      font-size: 42px;
+      line-height: 42px;
+    }
+  }
+
+  .advantages__content-container {
+    padding: 0 20px;
+  }
+
+  .advantages__list {
+    li {
+      margin-right: calc(100% - 357px * 2);
+
+      &:nth-of-type(2n) {
+        padding-left: 95px;
+        background-size: 60px 60px;
+        background-position: 5px 50px;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        margin-bottom: 240px;
+      }
+    }
+  }
+
+  .advantages__list-item {
+    width: 357px;
+    padding-top: 42px;
+    padding-left: 143px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    border-bottom: none;
+    background-position: left 27px top 50px;
+    background-size: 89px 60px;
+
+    h3 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    p {
+      max-width: 232px;
+    }
+  }
+
+  .advantages__center-item {
+    position: absolute;
+    top: 161px;
+    left: 50%;
+    width: 57.5%;
+    height: 239px;
+    padding-top: 20px;
+    transform: translateX(-50%);
+
+    h3 {
+      width: 200px;
+      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 33px;
+
+      span {
+        line-height: 60px;
+      }
+    }
+
+    p {
+      width: 180px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .advantages {
+    padding-top: 70px;
+    padding-bottom: 25px;
+
+    h2 {
+      margin-bottom: 43px;
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  .advantages__list {
+    flex-direction: column;
+
+    li {
+      margin-right: 0;
+      margin-bottom: 33px;
+
+      &:nth-of-type(2n) {
+        padding-left: 0;
+        background-size: 60px 60px;
+        background-position: center top 6px;
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        margin-bottom: 33px;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 115%;
+      }
+    }
+  }
+
+  .advantages__list-item {
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    padding-top: 80px;
+    background-position: center top 10px;
+
+    p {
+      max-width: 228px;
+      text-align: center;
+    }
+
+    &--area {
+      background-image: url("../img/area-mobile.svg");
+    }
+
+    &--parking {
+      background-image: url("../img/parking-mobile.svg");
+    }
+
+    &--comfort {
+      background-image: url("../img/comfort-mobile.svg");
+    }
+
+    &--experience {
+      background-image: url("../img/experiance-mobile.svg");
+    }
+  }
+
+  .advantages__center-item {
+    top: 37%;
+    width: 100%;
+  }
+}
