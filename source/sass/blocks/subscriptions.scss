@@ -149,6 +149,16 @@
     width: 206px;
     min-height: 64px;
     color: inherit;
+
+    &:hover {
+      opacity: $hover-state-opacity;
+      transition: $transition-time;
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+      transition: $transition-time;
+    }
   }
 
   &:hover,

@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "onboard",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "babel-eslint": "^10.1.0",
@@ -28,9 +26,7 @@
     "gulp-webp": "^4.0.1",
     "pixel-glass": "^1.0.13",
     "stylelint": "9.10.x",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "webpack": "^4.42.1",
-    "webpack-stream": "^5.2.1"
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",

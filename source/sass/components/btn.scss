@@ -1,5 +1,7 @@
 .btn {
   display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
   align-items: center;
   justify-content: center;
   border: none;
@@ -34,6 +36,9 @@
 
 @media (max-width: $tablet-width-max) {
   .btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     &--second-style {
       border: 2px solid $second-color;
     }

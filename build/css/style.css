@@ -990,6 +990,8 @@ button.swiper-pagination-bullet {
 
 .btn {
   display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
   align-items: center;
   justify-content: center;
   border: none;
@@ -1011,8 +1013,11 @@ button.swiper-pagination-bullet {
     transition: 0.3s easy-out; }
 
 @media (max-width: 1199px) {
-  .btn--second-style {
-    border: 2px solid #ffffff; } }
+  .btn {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    .btn--second-style {
+      border: 2px solid #ffffff; } }
 
 .header-container {
   background-color: #1e3476;
@@ -1549,6 +1554,12 @@ button.swiper-pagination-bullet {
     width: 206px;
     min-height: 64px;
     color: inherit; }
+    .subscriptions__list-item a:hover {
+      opacity: 0.8;
+      transition: 0.3s easy-out; }
+    .subscriptions__list-item a:active {
+      opacity: 0.5;
+      transition: 0.3s easy-out; }
   .subscriptions__list-item:hover, .subscriptions__list-item:focus {
     border-color: #d10a42;
     border-image: linear-gradient(140deg, #d10a42, #00359f);

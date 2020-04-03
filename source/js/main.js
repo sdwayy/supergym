@@ -1,49 +1,26 @@
-import $ from 'jquery';
-import Swiper from 'swiper';
-import IMask from 'imask';
+'use strict';
 
-const trainersCards = document.querySelectorAll(`.trainers__card`);
-const trainers = document.querySelector(`.trainers`);
-const subscriptionsListItems = document.querySelectorAll(`.subscriptions__list-item`);
-const promoBtn = document.querySelector(`.promo__btn`);
-const reviews = document.querySelector(`.reviews`);
+var Swiper = window.Swiper;
+var imask = window.IMask;
+var $ = window.$;
 
-const onAnchorClick = (anchor) => {
-  const block = $(anchor).attr(`href`);
+var trainersCards = document.querySelectorAll('.trainers__card');
+var trainers = document.querySelector('.trainers');
+var subscriptionsListItems = document.querySelectorAll('.subscriptions__list-item');
+var promoBtn = document.querySelector('.promo__btn');
+var reviews = document.querySelector('.reviews');
+var phoneInput = document.querySelector('#user-phone');
 
-  $(`html, body`).animate({scrollTop: $(block).offset().top + `px`});
-};
-
-if (promoBtn) {
-  const onPromoBtnClick = () => {
-    onAnchorClick(promoBtn);
-  };
-
-  promoBtn.addEventListener(`click`, onPromoBtnClick);
-}
-
-if (subscriptionsListItems.length > 0) {
-  for (const subscriptionsItems of subscriptionsListItems) {
-    const priceBlock = subscriptionsItems.querySelector(`span:last-of-type`);
-    const priceBlockContent = priceBlock.textContent.trim();
-    const price = priceBlockContent.slice(0, priceBlockContent.length - 2);
-
-    priceBlock.dataset.price = price;
-  }
-}
-
-if (trainers) {
-  trainers.classList.remove(`trainers--no-js`);
-
-  const trainersSwiper = new Swiper(`.trainers__list-container`, {
+var createMultiSlidesSwiper = function (сontainer) {
+  return new Swiper(сontainer, {
     // Optional parameters
     loop: true,
     loopFillGroupWithBlank: true,
 
     // Navigation arrows
     navigation: {
-      nextEl: `.swiper-button-next`,
-      prevEl: `.swiper-button-prev`,
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
 
     breakpoints: {
@@ -66,34 +43,79 @@ if (trainers) {
       }
     },
   });
+};
+
+var createMonoSlideSwiper = function (container) {
+  return new Swiper(container, {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.reviews .swiper-button-next',
+      prevEl: '.reviews .swiper-button-prev',
+    }
+  });
+};
+
+var validatePhone = function (input) {
+  return imask(input, {
+    mask: '+{7}(000)000-00-00'
+  });
+};
+
+var onAnchorClick = function (anchor) {
+  var block = $(anchor).attr('href');
+
+  $('html, body').animate({scrollTop: $(block).offset().top + 'px'});
+};
+
+if (promoBtn) {
+  var onPromoBtnClick = function () {
+    onAnchorClick(promoBtn);
+  };
+
+  promoBtn.addEventListener('click', onPromoBtnClick);
+}
+
+if (subscriptionsListItems.length > 0) {
+  for (
+    var subscriptionsItemIndex = 0;
+    subscriptionsItemIndex < subscriptionsListItems.length;
+    subscriptionsItemIndex++
+  ) {
+    var subscriptionsItem = subscriptionsListItems[subscriptionsItemIndex];
+    var priceBlock = subscriptionsItem.querySelector('span:last-of-type');
+    var priceBlockContent = priceBlock.textContent.trim();
+    var price = priceBlockContent.slice(0, priceBlockContent.length - 2);
+
+    priceBlock.dataset.price = price;
+  }
+}
+
+if (trainers) {
+  trainers.classList.remove('trainers--no-js');
+  createMultiSlidesSwiper('.trainers__list-container');
 }
 
 if (trainersCards.length > 0) {
-  for (const trainerCard of trainersCards) {
-    const trainerName = trainerCard.querySelector(`h3`);
-    const trainerDescription = trainerCard.querySelector(`.trainers__description`);
-    const trainerNameBlockCopy = trainerName.cloneNode(true);
+  for (
+    var trainerCardIndex = 0;
+    trainerCardIndex < trainersCards.length;
+    trainerCardIndex++
+  ) {
+    var trainerCard = trainersCards[trainerCardIndex];
+    var trainerName = trainerCard.querySelector('h3');
+    var trainerDescription = trainerCard.querySelector('.trainers__description');
+    var trainerNameBlockCopy = trainerName.cloneNode(true);
 
-    trainerDescription.prepend(trainerNameBlockCopy);
+    trainerDescription.insertBefore(trainerNameBlockCopy, trainerDescription.firstChild);
   }
 }
 
 if (reviews) {
-  reviews.classList.remove(`reviews--no-js`);
-
-  const reviewsSwiper = new Swiper(`.reviews__container`, {
-    slidesPerView: 1,
-    loop: true,
-    navigation: {
-      nextEl: `.reviews .swiper-button-next`,
-      prevEl: `.reviews .swiper-button-prev`,
-    },
-  });
+  reviews.classList.remove('reviews--no-js');
+  createMonoSlideSwiper('.reviews__container');
 }
 
-const phoneInput = document.querySelector(`#user-phone`);
 if (phoneInput) {
-  const validatePhone = new IMask(phoneInput, {
-    mask: `+{7}(000)000-00-00`
-  });
+  validatePhone(phoneInput);
 }
