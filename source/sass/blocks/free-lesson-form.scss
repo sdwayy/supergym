@@ -1,0 +1,145 @@
+.free-lesson-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 65px;
+  padding-left: 102px;
+  padding-right: 168px;
+  padding-bottom: 45px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $second-color;
+  background-color: $description-font-color;
+
+  h2 {
+    width: 410px;
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-family: "Bebas Neue Bold", "Arial", sans-serif;
+    font-size: $subtitle-font-size;
+    text-align: left;
+    line-height: 64px;
+    letter-spacing: $title-letter-spacing;
+  }
+
+  form {
+    width: 410px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 52px;
+    border: 3px solid $second-color;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      opacity: $hover-state-opacity;
+      transition: $transition-time;
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+      transition: $transition-time;
+    }
+  }
+
+  label {
+    width: 46%;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border: none;
+    border-bottom: 1px solid #74819c;
+    color: inherit;
+    background-color: transparent;
+
+    &:hover {
+      opacity: $hover-state-opacity;
+      border-color: $second-color;
+      transition: $transition-time;
+    }
+
+    &:focus {
+      border-color: $second-color;
+      transition: $transition-time;
+    }
+
+    input[type="text"]::placeholder,
+    input[type="tel"]::placeholder {
+      color: $second-color;
+    }
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .free-lesson-form {
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 68px;
+
+    h2 {
+      width: 100%;
+      margin-left: -120px;
+      margin-bottom: 40px;
+      font-size: 42px;
+      line-height: 42px;
+      text-align: center;
+    }
+
+    form {
+      width: 473px;
+      margin-left: 30px;
+    }
+
+    label {
+      width: 43.5%;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .free-lesson-form {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+
+    h2 {
+      margin-left: 0;
+      font-size: 32px;
+      line-height: 32px;
+      text-align: unset;
+    }
+
+    form {
+      width: 100%;
+      margin: 0;
+    }
+
+    label {
+      width: 100%;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+      margin-bottom: 35px;
+
+      &:last-of-type {
+        margin-bottom: 38px;
+      }
+    }
+  }
+}

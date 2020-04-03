@@ -58,6 +58,7 @@
     "node": "8.15"
   },
   "dependencies": {
+    "imask": "^6.0.3",
     "jquery": "^3.4.1",
     "swiper": "^5.3.6"
   }

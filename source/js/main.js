@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Swiper from 'swiper';
+import IMask from 'imask';
 
 const trainersCards = document.querySelectorAll(`.trainers__card`);
 const trainers = document.querySelector(`.trainers`);
@@ -83,13 +84,16 @@ if (reviews) {
   const reviewsSwiper = new Swiper(`.reviews__container`, {
     slidesPerView: 1,
     loop: true,
-    pagination: {
-      el: `.swiper-pagination`,
-      clickable: true,
-    },
     navigation: {
       nextEl: `.reviews .swiper-button-next`,
       prevEl: `.reviews .swiper-button-prev`,
     },
+  });
+}
+
+const phoneInput = document.querySelector(`#user-phone`);
+if (phoneInput) {
+  const validatePhone = new IMask(phoneInput, {
+    mask: `+{7}(000)000-00-00`
   });
 }

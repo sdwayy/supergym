@@ -1,0 +1,133 @@
+.page-footer__header {
+  display: flex;
+}
+
+.page-footer__free-lesson-form,
+.page-footer__address {
+  width: 50%;
+}
+
+.page-footer__bottom {
+  background-color: #030a1a;
+}
+
+.page-footer__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-footer__social {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    display: flex;
+    align-items: center;
+    margin-right: 23px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: $hover-state-opacity;
+      transition: $transition-time;
+    }
+
+    &:active {
+      opacity: $active-state-opacity;
+      transition: $transition-time;
+    }
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .page-footer__header {
+    flex-direction: column;
+  }
+
+  .page-footer__free-lesson-form,
+  .page-footer__address {
+    width: 100%;
+  }
+
+  .page-footer__bottom-wrapper {
+    padding-top: 45px;
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
+
+  .page-footer__social a:not(:last-of-type) {
+    margin-right: 18px;
+  }
+
+  .page-footer__logo {
+    width: 82px;
+    height: 18px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .page-footer__bottom-wrapper {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+    padding-top: 50px;
+  }
+
+  .page-footer__logo {
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 145px);
+    width: 68px;
+    height: 15px;
+  }
+
+  .page-footer__header {
+    flex-direction: column;
+  }
+
+  .page-footer__site-nav {
+    a:first-of-type {
+      padding-top: 45px;
+    }
+  }
+
+  .page-footer__social a:not(:last-of-type) {
+    margin-right: 35px;
+  }
+
+  .page-footer__social {
+    justify-content: flex-start;
+    margin-left: -150px;
+  }
+
+  .social__link {
+    &--vk {
+      svg {
+        width: 32px;
+        height: 17px;
+      }
+    }
+
+    &--insta {
+      svg {
+        width: 27px;
+        height: 27px;
+      }
+    }
+
+    &--fb {
+      svg {
+        width: 14px;
+        height: 27px;
+      }
+    }
+  }
+}

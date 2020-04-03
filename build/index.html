@@ -8,9 +8,6 @@
   <meta name="description" content="Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья."/>
   <title>Supergym</title>
   <link rel="preload" href="/fonts/BebasNeue-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/BebasNeue-Bold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="/fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css">
@@ -338,6 +335,62 @@
       </button>
     </section>
   </main>
+  <footer class="page-footer">
+    <header class="page-footer__header">
+      <div class="page-footer__free-lesson-form free-lesson-form">
+        <h2>Бесплатное занятие</h2>
+        <form action="#" method="POST" autocomplete="off">
+          <label aria-label="Введите ваше имя">
+            <input type="text" name="user-name" placeholder="Имя" required minlength="3" maxlength="20">
+          </label>
+          <label aria-label="Введите ваш телефон">
+            <input type="tel" name="user-phone" placeholder="Телефон" required minlength="16" maxlength="16" id="user-phone">
+          </label>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+      <address class="page-footer__address address">
+        <h2>Контакты</h2>
+        <div class="address__content-container">
+          <p><b>Адрес:</b> г. Омск, ул. 60 лет Октября, 7</p>
+          <p><b>График работы:</b> Пн-Вс: с 8:00 до 22:00</p>
+          <p><b>Телефон:</b> <a href="tel:88005555555">8-800-555-55-55</a></p>
+          <p><b>Email:</b> <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a></p>
+        </div>
+      </address>
+    </header>
+    <div class="page-footer__bottom">
+      <div class="page-footer__bottom-wrapper wrapper">
+        <a class="page-footer__logo">
+          <img src="img/logo.svg" alt="Логотип компании" width="89" height="20">
+        </a>
+        <div class="page-footer__site-nav site-nav">
+          <a href="#" class="site-nav__link">Услуги</a>
+          <a href="#" class="site-nav__link">Абонементы</a>
+          <a href="#" class="site-nav__link">Акции</a>
+          <a href="#" class="site-nav__link">Тренеры</a>
+          <a href="#" class="site-nav__link">Расписание</a>
+        </div>
+        <div class="page-footer__social social">
+          <a href="#" class="social__link social__link--vk" aria-label="Мы в VK">
+            <svg width="24" height="13" viewBox="0 0 24 13">
+              <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+            </svg>
+          </a>
+          <a href="#" class="social__link social__link--insta" aria-label="Мы в Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <use xlink:href="img/sprite_auto.svg#icon-insta"></use>
+            </svg>
+          </a>
+          <a href="#" class="social__link social__link--fb" aria-label="Мы в Facebook">
+            <svg width="15" height="24" viewBox="0 0 15 24">
+              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="js/vendor.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
