@@ -1487,7 +1487,8 @@ button.swiper-pagination-bullet {
   box-shadow: 0 -2px 0 0 rgba(120, 120, 120, 0.2) inset; }
   .subscriptions__durations label {
     margin-right: 45px;
-    color: rgba(16, 38, 84, 0.5); }
+    color: rgba(16, 38, 84, 0.5);
+    cursor: pointer; }
     .subscriptions__durations label:last-of-type {
       margin-right: 0; }
     .subscriptions__durations label--active {
