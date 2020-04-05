@@ -64,14 +64,15 @@
     margin-bottom: 30px;
     padding-bottom: 5px;
     border: none;
-    border-bottom: 1px solid #74819c;
+    border-bottom: 1px solid rgba(116, 129, 156, 1);;
     color: inherit;
     background-color: transparent;
+    outline: none;
 
     &:hover {
-      opacity: $hover-state-opacity;
       border-color: $second-color;
       transition: $transition-time;
+      border-bottom: 1px solid rgba(116, 129, 156, 0.5);
     }
 
     &:focus {
@@ -79,8 +80,7 @@
       transition: $transition-time;
     }
 
-    input[type="text"]::placeholder,
-    input[type="tel"]::placeholder {
+    &::placeholder {
       color: $second-color;
     }
   }

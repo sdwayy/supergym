@@ -113,14 +113,14 @@
   h3 {
     width: 100%;
     margin: 0;
-    margin-top: -25px;
-    margin-bottom: 10px;
+    margin-top: -10px;
+    margin-bottom: 35px;
     font-size: 26px;
     line-height: 39px;
 
     span {
       font-size: 74px;
-      line-height: 111px;
+      line-height: 80px;
     }
   }
 
@@ -188,17 +188,16 @@
     left: 50%;
     width: 57.5%;
     height: 239px;
-    padding-top: 20px;
     transform: translateX(-50%);
 
     h3 {
       width: 200px;
       margin-bottom: 20px;
       font-size: 22px;
-      line-height: 33px;
+      line-height: 22px;
 
       span {
-        line-height: 60px;
+        line-height: 85px;
       }
     }
 
@@ -239,7 +238,7 @@
       }
 
       &:nth-of-type(2) {
-        margin-bottom: 115%;
+        margin-bottom: 320px;
       }
     }
   }
@@ -274,7 +273,16 @@
   }
 
   .advantages__center-item {
-    top: 37%;
+    top: calc(159px * 2 + 76px);
     width: 100%;
+
+    h3 {
+      margin-bottom: 10px;
+      line-height: 30px;
+
+      span {
+        line-height: 70px;
+      }
+    }
   }
 }

@@ -1,38 +1,17 @@
 .event {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   width: 1157px;
   background-color: $second-background-color;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 57%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right top;
+
+  picture {
+    line-height: 0;
+    font-size: 0;
   }
 }
 
-.no-webp .event::after {
-  background-image: url("../img/tournament-promo-desktop.jpg");
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/tournament-promo-desktop@2x.jpg");
-  }
-}
-
-.webp .event::after {
-  background-image: url("../img/tournament-promo-desktop.webp");
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/tournament-promo-desktop@2x.webp");
-  }
-}
-
-.event__container {
+.event__description-container {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -40,7 +19,7 @@
   padding-top: 83px;
   padding-left: 78px;
   padding-right: 75px;
-  padding-bottom: 87px;
+  padding-bottom: 85px;
 
   h2 {
     width: 240px;
@@ -108,14 +87,19 @@
   .event {
     width: 88.4%;
 
-    &::after {
-      width: 57%;
+    picture {
+      flex-shrink: 0;
+    }
+
+    img {
+      width: 386px;
+      height: 292px;
     }
   }
 
-  .event__container {
+  .event__description-container {
+    flex-grow: 1;
     justify-content: center;
-    width: calc(100% - 57%);
     padding-top: 43px;
     padding-left: 0;
     padding-right: 0;
@@ -178,50 +162,23 @@
       width: 56px;
     }
   }
-
-  .no-webp .event::after {
-    background-image: url("../img/tournament-tablet.jpg");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/tournament-tablet@2x.jpg");
-    }
-  }
-
-  .webp .event::after {
-    background-image: url("../img/tournament-tablet.webp");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/tournament-tablet@2x.webp");
-    }
-  }
 }
 
 @media (max-width: $mobile-width-max) {
   .event {
+    flex-wrap: wrap;
+    justify-content: center;
     width: 90.4%;
 
-    &::after {
-      left: 0;
-      bottom: 0;
-      top: unset;
-      width: 100%;
+
+    img {
+      width: 290px;
       height: 292px;
-      background-position: center;
     }
   }
 
-  .no-webp .event::after {
-    background-image: url("../img/tournament-mobile.jpg");
-  }
-
-  .webp .event::after {
-    background-image: url("../img/tournament-mobile.webp");
-  }
-
-  .event__container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 343px;
-    z-index: 1;
+  .event__description-container {
+    width: 290px;
+    margin-right: auto;
   }
 }

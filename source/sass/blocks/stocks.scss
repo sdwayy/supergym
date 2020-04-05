@@ -11,6 +11,15 @@
     text-align: center;
     color: $description-font-color;
   }
+
+  picture {
+    line-height: 0;
+    font-size: 0;
+  }
+}
+
+.stocks__main-stock {
+  background-color: $second-background-color;
 }
 
 .stocks__content-container {
@@ -18,24 +27,19 @@
   justify-content: space-between;
 }
 
-.stocks__main-stock {
+.stocks__main-stock-container {
   display: flex;
   flex-direction: column;
-  width: 560px;
-  min-height: 462px;
-  padding-right: 280px;
-  padding-top: 10px;
+  padding-top: 28px;
   padding-left: 45px;
-  padding-bottom: 43px;
+  padding-right: 45px;
+  padding-bottom: 45px;
   color: $second-color;
-  background-color: $second-background-color;
-  background-repeat: no-repeat;
-  background-size: 50% 100%;
-  background-position: right top;
 
   h3 {
     width: 150px;
-    margin-bottom: 13px;
+    margin: 0;
+    margin-bottom: 20px;
     font-size: 28px;
     line-height: 44px;
 
@@ -56,6 +60,12 @@
     @include link;
     @include more-details-link;
   }
+}
+
+.stocks__main-stock {
+  display: flex;
+  width: 560px;
+  min-height: 462px;
 }
 
 .stocks__stock-list {
@@ -102,22 +112,6 @@
   }
 }
 
-.no-webp .stocks__main-stock {
-  background-image: url("../img/stock-photo.jpg");
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/stock-photo@2x.jpg");
-  }
-}
-
-.webp .stocks__main-stock {
-  background-image: url("../img/stock-photo.webp");
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/stock-photo@2x.webp");
-  }
-}
-
 @media (max-width: $tablet-width-max) {
   .stocks {
     padding-top: 100px;
@@ -135,25 +129,38 @@
     flex-direction: column;
   }
 
-  .stocks__main-stock {
+  .stocks__main-stock-container {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 38px;
+    padding-bottom: 40px;
+  }
+
+  .stocks__main-stock {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     margin-bottom: 30px;
-    padding-top: 35px;
     padding-left: 0;
-    padding-right: 399px;
-    background-size: contain;
+
+    img {
+      width: 399px;
+      height: 462px;
+    }
 
     h3 {
       margin-top: 0;
+      margin-bottom: 15px;
       margin-left: -40px;
     }
 
-    a:last-of-type {
-      margin-left: -110px;
-      align-self: center;
+    a {
+      &:last-of-type {
+        align-self: unset;
+        margin-left: -110px;
+      }
     }
   }
 
@@ -176,26 +183,11 @@
   .stocks__stock {
     width: 48%;
   }
-
-  .no-webp .stocks__main-stock {
-    background-image: url("../img/stock-photo-tablet.jpg");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/stock-photo-tablet@2x.jpg");
-    }
-  }
-
-  .webp .stocks__main-stock {
-    background-image: url("../img/stock-photo-tablet.webp");
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/stock-photo-tablet@2x.webp");
-    }
-  }
 }
 
 @media (max-width: $mobile-width-max) {
   .stocks {
+    justify-content: center;
     padding-top: 73px;
     padding-left: 4.7%;
     padding-right: 4.7%;
@@ -205,17 +197,28 @@
       font-size: 32px;
       line-height: 32px;
     }
+
+    img {
+      width: 290px;
+      height: 299px;
+    }
+  }
+
+  .stocks__main-stock-container {
+    width: 290px;
+    margin-right: auto;
+    padding-bottom: 43px;
   }
 
   .stocks__main-stock {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 0;
-    padding-top: 30px;
-    padding-bottom: 340px;
-    background-position: center top calc(285px + 5%);
-    background-size: 100%;
 
     h3 {
       margin-left: 0;
+      margin-bottom: 10px;
       text-align: center;
     }
 
@@ -224,11 +227,15 @@
     }
 
     p:last-of-type {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     a:last-of-type {
       margin-left: 0;
+    }
+
+    img {
+      height: 100%;
     }
   }
 
@@ -257,13 +264,5 @@
     a:last-of-type {
       align-self: center;
     }
-  }
-
-  .no-webp .stocks__main-stock {
-    background-image: url("../img/stock-photo-mobile.jpg");
-  }
-
-  .webp .stocks__main-stock {
-    background-image: url("../img/stock-photo-mobile.webp");
   }
 }

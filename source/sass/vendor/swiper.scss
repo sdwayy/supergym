@@ -163,13 +163,43 @@
   top: 50%;
   width: 27px;
   height: 44px;
-  margin-top: -22px;
+  margin: 0;
   z-index: 10;
   cursor: pointer;
   background-size: 27px 44px;
   background-position: center;
   background-repeat: no-repeat;
+  outline: none;
+
+  svg {
+    stroke:#afafaf;
+  }
+
+  &:hover {
+    translate: $transition-time;
+
+    svg {
+      stroke: darken(#afafaf, 30%);
+    }
+  }
+
+  &:active {
+    translate: $transition-time;
+
+    svg {
+      stroke: #afafaf;
+    }
+  }
+
+  &:focus {
+    translate: $transition-time;
+
+    svg {
+      stroke: $second-background-color;
+    }
+  }
 }
+
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   opacity: 0.35;

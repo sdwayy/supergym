@@ -77,22 +77,22 @@
 .reviews .swiper-button-next,
 .reviews .swiper-button-prev {
   position: absolute;
-  top: 59%;
+  top: 288px;
   width: 16px;
   height: 32px;
   padding: 0;
   border: none;
   background-color: transparent;
-  transform: translateY(-59%);
+  outline: none;
   cursor: pointer;
 }
 
 .reviews .swiper-button-next {
-  right: 260px;
+  right: 22%;
 }
 
 .reviews .swiper-button-prev {
-  left: 260px;
+  left: 22%;
 }
 
 @media (max-width: $tablet-width-max) {
@@ -118,16 +118,15 @@
 
   .reviews .swiper-button-next,
   .reviews .swiper-button-prev {
-    top: 52%;
-    transform: translateY(-52%);
+    top: 218px;
   }
 
   .reviews .swiper-button-next {
-    right: 40px;
+    right: 6%;
   }
 
   .reviews .swiper-button-prev {
-    left: 40px;
+    left: 6%;
   }
 
   .reviews__item {
@@ -211,10 +210,10 @@
   }
 
   .reviews .swiper-button-next {
-    right: 15px;
+    right: 4.5%;
   }
 
   .reviews .swiper-button-prev {
-    left: 15px;
+    left: 4.5%;
   }
 }

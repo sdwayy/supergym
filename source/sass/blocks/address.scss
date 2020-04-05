@@ -3,7 +3,6 @@
   padding-bottom: 45px;
   padding-left: 120px;
   padding-right: 40px;
-  font-style: normal;
   color: $description-font-color;
   border-top: 1px solid #74819c;
 
@@ -50,6 +49,7 @@
   position: relative;
   width: 500px;
   padding-left: 4px;
+  font-style: normal;
 
   columns: 2;
   column-gap: 80px;
