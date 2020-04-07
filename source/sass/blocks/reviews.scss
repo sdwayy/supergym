@@ -56,7 +56,7 @@
   padding-right: 62px;
   padding-top: 52px;
   padding-bottom: 56px;
-  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 
   img {
     margin-top: 10px;
@@ -64,10 +64,6 @@
   }
 }
 
-.reviews__description-container {
-  width: 328px;
-  padding-top: 2px;
-}
 
 .reviews .swiper-button-next,
 .reviews .swiper-button-prev {
@@ -83,6 +79,9 @@
 }
 
 .reviews__description-container {
+  width: 328px;
+  padding-top: 2px;
+
   p {
     margin: 0;
     font-size: 16px;
@@ -178,12 +177,11 @@
     img {
       position: absolute;
       top: 40px;
-      left: calc(50% - 19px);
+      left: calc(50% - 72px);
       width: 68px;
       height: 68px;
       margin: 0;
       margin-right: 20px;
-      transform: translateX(calc(-50% - 19px));
     }
 
     h3 {

@@ -2205,6 +2205,9 @@ button.swiper-pagination-bullet {
     font-size: 0; }
 
 .stocks__main-stock {
+  display: flex;
+  width: 560px;
+  min-height: 462px;
   background-color: #ed0233; }
   .stocks__main-stock picture {
     width: 50%; }
@@ -2258,11 +2261,6 @@ button.swiper-pagination-bullet {
     .stocks__main-stock-container a:last-of-type:active {
       opacity: 0.5;
       transition: 0.3s easy-out; }
-
-.stocks__main-stock {
-  display: flex;
-  width: 560px;
-  min-height: 462px; }
 
 .stocks__stock-list {
   list-style-type: none;
@@ -2460,14 +2458,10 @@ button.swiper-pagination-bullet {
   padding-right: 62px;
   padding-top: 52px;
   padding-bottom: 56px;
-  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2); }
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2); }
   .reviews__item img {
     margin-top: 10px;
     margin-right: 28px; }
-
-.reviews__description-container {
-  width: 328px;
-  padding-top: 2px; }
 
 .reviews .swiper-button-next,
 .reviews .swiper-button-prev {
@@ -2481,16 +2475,18 @@ button.swiper-pagination-bullet {
   outline: none;
   cursor: pointer; }
 
-.reviews__description-container p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 23px; }
-
-.reviews__description-container h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 20px;
-  line-height: 30px; }
+.reviews__description-container {
+  width: 328px;
+  padding-top: 2px; }
+  .reviews__description-container p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 23px; }
+  .reviews__description-container h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 30px; }
 
 .reviews .swiper-button-next {
   right: calc(50% - 560px / 2 - 56px); }
@@ -2548,12 +2544,11 @@ button.swiper-pagination-bullet {
     .reviews__item img {
       position: absolute;
       top: 40px;
-      left: calc(50% - 19px);
+      left: calc(50% - 72px);
       width: 68px;
       height: 68px;
       margin: 0;
-      margin-right: 20px;
-      transform: translateX(calc(-50% - 19px)); }
+      margin-right: 20px; }
     .reviews__item h3 {
       width: 70px;
       margin-left: 100px;

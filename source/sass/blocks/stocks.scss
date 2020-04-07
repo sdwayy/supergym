@@ -19,6 +19,9 @@
 }
 
 .stocks__main-stock {
+  display: flex;
+  width: 560px;
+  min-height: 462px;
   background-color: $second-background-color;
 
   picture {
@@ -65,12 +68,6 @@
     @include more-details-link;
     border-bottom-color: $second-color;
   }
-}
-
-.stocks__main-stock {
-  display: flex;
-  width: 560px;
-  min-height: 462px;
 }
 
 .stocks__stock-list {

@@ -75,7 +75,7 @@
       transition: $transition-time;
 
       span {
-        border-bottom: 2px solid rgba(209, 10, 66, 0.3);;
+        border-bottom: 2px solid rgba(209, 10, 66, 0.3);
       }
     }
 
@@ -200,7 +200,6 @@
 
 @media (max-width: $tablet-width-max) {
   .subscriptions {
-
     &::after {
       content: "";
       bottom: -8%;
@@ -265,6 +264,7 @@
 @media (max-width: $mobile-width-max) {
   .subscriptions {
     background-color: #f8f9fc;
+
     &::after {
       display: none;
     }
