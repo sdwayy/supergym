@@ -2206,6 +2206,8 @@ button.swiper-pagination-bullet {
 
 .stocks__main-stock {
   background-color: #ed0233; }
+  .stocks__main-stock picture {
+    width: 50%; }
 
 .stocks__content-container {
   display: flex;
@@ -2338,6 +2340,8 @@ button.swiper-pagination-bullet {
     width: 100%;
     margin-bottom: 30px;
     padding-left: 0; }
+    .stocks__main-stock picture {
+      width: unset; }
     .stocks__main-stock img {
       width: 399px;
       height: 462px; }

@@ -20,6 +20,10 @@
 
 .stocks__main-stock {
   background-color: $second-background-color;
+
+  picture {
+    width: 50%;
+  }
 }
 
 .stocks__content-container {
@@ -145,6 +149,10 @@
     width: 100%;
     margin-bottom: 30px;
     padding-left: 0;
+
+    picture {
+      width: unset;
+    }
 
     img {
       width: 399px;
