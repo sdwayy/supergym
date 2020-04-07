@@ -45,11 +45,27 @@
   </div>
   <main class="page-main">
     <section class="page-main__gym-description gym-description wrapper">
-      <h2>Тренажерный зал</h2>
-      <p>Просторный зал площадью 900 кв/м</p>
-      <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-      <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+      <div class="gym-description__description">
+        <h2>Тренажерный зал</h2>
+        <p>Просторный зал площадью 900 кв/м</p>
+        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+        <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
+      </div>
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/gym-photo-mobile.webp">
+        <source media="(max-width: 767px)" srcset="img/gym-photo-mobile.jpg">
+        <source media="(max-width: 1199px)" srcset="img/gym-photo-tablet.webp 1x, img/gym-photo-tablet@2x.webp 2x">
+        <source media="(max-width: 1199px)" srcset="img/gym-photo-tablet.jpg 1x, img/gym-photo-tablet@2x.jpg 2x">
+        <source type="image/webp" srcset="img/gym-photo.webp 1x, img/gym-photo@2x.webp 2x">
+        <img src="img/gym-photo.jpg" width="660" height="401" alt="Фото тренажерного зала" srcset="img/gym-photo.jpg 1x, img/gym-photo@2x.jpg 2x" loading="lazy">
+      </picture>
       <div class="gym-description__video">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/video-preview-mobile.webp">
+          <source media="(max-width: 767px)" srcset="img/video-preview-mobile.jpg">
+          <source type="image/webp" srcset="img/video-preview.webp 1x, img/video-preview@2x.webp 2x">
+          <img src="img/video-preview.jpg" width="660" height="401" alt="Превью" srcset="img/video-preview.jpg 1x, img/video-preview@2x.jpg 2x" loading="lazy">
+        </picture>
         <button type="button" class="gym-description__play-btn btn"></button>
       </div>
     </section>
@@ -324,30 +340,6 @@
     </section>
     <section class="page-main__reviews reviews reviews--no-js wrapper">
       <h2>Отзывы</h2>
-      <div class="reviews__container swiper-container">
-        <ul class="reviews__list swiper-wrapper">
-          <li class="reviews__item swiper-slide">
-            <picture>
-              <source type="image/webp" srcset="img/review-photo.webp 1x, img/review-photo@2x.webp 2x">
-              <img src="img/review-photo.png" width="80" height="80" alt="Анна Орлова"
-                srcset="img/review-photo.png 1x, img/review-photo@2x.png 2x" loading="lazy">
-            </picture>
-            <h3>Анна Орлова</h3>
-            <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
-              дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-          </li>
-          <li class="reviews__item swiper-slide">
-            <picture>
-              <source type="image/webp" srcset="img/review-photo.webp 1x, img/review-photo@2x.webp 2x">
-              <img src="img/review-photo.png" width="80" height="80" alt="Анна Орлова"
-                srcset="img/review-photo.png 1x, img/review-photo@2x.png 2x" loading="lazy">
-            </picture>
-            <h3>Анна Орлова</h3>
-            <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
-              дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-          </li>
-        </ul>
-      </div>
       <button type="button" class="swiper-button-next" aria-label="Следующий слайд">
         <svg width="20" height="32" viewbox="0 0 20 32">
           <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
@@ -358,6 +350,34 @@
           <use xlink:href="img/sprite_auto.svg#icon-arrow-left"></use>
         </svg>
       </button>
+      <div class="reviews__container swiper-container">
+        <ul class="reviews__list swiper-wrapper">
+          <li class="reviews__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="img/review-photo.webp 1x, img/review-photo@2x.webp 2x">
+              <img src="img/review-photo.png" width="80" height="80" alt="Анна Орлова"
+                srcset="img/review-photo.png 1x, img/review-photo@2x.png 2x" loading="lazy">
+            </picture>
+            <div class="reviews__description-container">
+              <h3>Анна Орлова</h3>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+                дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+          <li class="reviews__item swiper-slide">
+            <picture>
+              <source type="image/webp" srcset="img/review-photo.webp 1x, img/review-photo@2x.webp 2x">
+              <img src="img/review-photo.png" width="80" height="80" alt="Анна Орлова"
+                srcset="img/review-photo.png 1x, img/review-photo@2x.png 2x" loading="lazy">
+            </picture>
+            <div class="reviews__description-container">
+              <h3>Анна Орлова</h3>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+                дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
   <footer class="page-footer">

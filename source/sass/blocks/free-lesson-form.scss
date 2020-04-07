@@ -23,7 +23,7 @@
   }
 
   form {
-    width: 410px;
+    width: 413px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -35,8 +35,12 @@
     justify-content: center;
     width: 100%;
     min-height: 52px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border: 3px solid $second-color;
     letter-spacing: 0.05em;
+    font-size: 14px;
+    line-height: 16px;
     font-weight: bold;
     text-transform: uppercase;
     color: inherit;
@@ -95,7 +99,7 @@
     h2 {
       width: 100%;
       margin-left: -120px;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
       font-size: 42px;
       line-height: 42px;
       text-align: center;
@@ -109,6 +113,16 @@
     label {
       width: 43.5%;
     }
+
+    input[type="text"],
+    input[type="tel"] {
+      margin-bottom: 31px;
+    }
+
+    button[type="submit"] {
+      font-size: 14px;
+      line-height: 16px
+    }
   }
 }
 
@@ -119,6 +133,7 @@
 
     h2 {
       margin-left: 0;
+      margin-bottom: 38px;
       font-size: 32px;
       line-height: 32px;
       text-align: unset;

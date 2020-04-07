@@ -29,7 +29,6 @@
 }
 
 .trainers__list-container {
-  position: relative;
   height: 294px;
 }
 
@@ -46,19 +45,18 @@
 .trainers__btn-arrow {
   width: 20px;
   height: 32px;
-  top: 52.5%;
+  top: calc(49px + 50px + (294px / 2) - 14px);
   padding: 0;
   border: 0;
   background-color: transparent;
-  transform: translateY(-52.5%);
   outline: none;
 
   &--left {
-    left: -37px;
+    left: calc(50% - 1160px / 2 - 55px);
   }
 
   &--right {
-    right: -37px;
+    right:calc(50% - 1160px / 2 - 55px);
   }
 }
 
@@ -70,7 +68,17 @@
   margin-right: 40px;
   padding-top: 247px;
   padding-right: 0;
+  outline: none;
   cursor: pointer;
+
+  picture {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  img {
+    height: 294px;
+  }
 
   &:hover {
     & > h3 {
@@ -79,6 +87,7 @@
 
     .trainers__description {
       z-index: 0;
+      visibility: visible;
     }
   }
 
@@ -111,6 +120,7 @@
   background-color: rgba(16, 38, 84, 0.89);
   transform: translateX(-50%);
   z-index: -1;
+  visibility: hidden;
 
   h3 {
     margin: 0;
@@ -123,6 +133,8 @@
 }
 
 .trainers__achievements {
+  padding-left: 73px;
+  padding-right: 40px;
   font-size: 14px;
   line-height: 21px;
 
@@ -143,17 +155,43 @@
     h2 {
       font-size: 42px;
       line-height: 42px;
-      margin-bottom: 40px;
+      margin-bottom: 38px;
+    }
+  }
+
+  .trainers__card  {
+    width: 268px;
+    padding-top: 244px;
+
+    img {
+      width: 268px;
+    }
+
+    h3 {
+      margin-bottom: -3px;
+      margin-left: 7px;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    h3 + span {
+      margin-bottom: 32px;
+      margin-left: -7px;
     }
   }
 
   .trainers__description {
-    width: 260px;
-    height: 294px - 55px;
+    width: 268px;
+    height: 294px;
+    padding-top: 50px;
+
+    h3 {
+      margin-left: -7px;
+    }
   }
 
   .trainers__list-container {
-    width: 77.6%;
+    width: 565px;
   }
 
   .trainers__achievements {
@@ -166,25 +204,24 @@
   }
 
   .trainers__btn-arrow {
-    top: 50%;
-    transform: translateY(-50%);
+    top: calc(42px + 38px + (294px / 2) - 16px);
 
     &--left {
-      left: 45px;
+      left: calc(50% - 565px / 2 - 58px);
     }
 
     &--right {
-      right: 45px;
+      right:calc(50% - 565px / 2 - 58px);
     }
   }
 }
 
 @media (max-width: $mobile-width-max) {
   .trainers {
-    padding-bottom: 65px;
+    padding-bottom: 70px;
 
     h2 {
-      margin-bottom: 45px;
+      margin-bottom: 38px;
       font-size: 32px;
       line-height: 32px;
     }
@@ -202,14 +239,15 @@
 
   .trainers__description {
     width: 226px;
-    padding-top: 38px;
+    height: 274px;
+    padding-top: 42px;
 
     h3 {
-      font-size: 18px;
-      line-height: 27px;
+      margin-left: 0;
     }
 
     h3 + span {
+      margin-left: 0;
       margin-bottom: 31px;
       color: #b6bdcc;
     }
@@ -230,21 +268,22 @@
   }
 
   .trainers__card {
-    min-height: 274px;
+    padding-top: 230px;
+    height: 274px;
   }
 
   .trainers__btn-arrow {
-    top: 50%;
+    top: 50.5%;
     width: 12px;
     height: 25px;
-    transform: translateY(-50%);
+    transform: translateY(-50.5%);
 
     &--left {
-      left: 15px;
+      left: calc(50% - 226px / 2 - 33px);
     }
 
     &--right {
-      right: 15px;
+      right:calc(50% - 226px / 2 - 33px);
     }
 
     svg {

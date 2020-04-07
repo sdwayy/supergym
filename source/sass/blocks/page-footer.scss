@@ -56,7 +56,8 @@
   }
 
   .page-footer__bottom-wrapper {
-    padding-top: 45px;
+    align-items: center;
+    padding-top: 43px;
     padding-left: $tablet-padding;
     padding-right: $tablet-padding;
   }
@@ -95,7 +96,7 @@
 
   .page-footer__site-nav {
     a:first-of-type {
-      padding-top: 45px;
+      padding-top: 38px;
     }
   }
 
