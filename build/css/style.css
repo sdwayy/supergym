@@ -1489,23 +1489,34 @@ button.swiper-pagination-bullet {
     color: #1c3374;
     border-bottom: 2px solid #d10a42; }
 
+.subscriptions__lists-container {
+  position: relative; }
+
 .subscriptions__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  z-index: -1; }
   .subscriptions__list li {
     margin-bottom: 10px;
-    margin-right: calc((100% - 353px * 3) / 2); }
+    margin-right: 40px; }
     .subscriptions__list li:nth-of-type(3n) {
       margin-right: 0; }
+  .subscriptions__list--six-months, .subscriptions__list--year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2; }
+  .subscriptions__list--active {
+    z-index: 1; }
 
 .subscriptions__list-item {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 353px;
+  width: 360px;
   border: 7px solid transparent;
   padding-top: 55px;
   padding-bottom: 60px;
@@ -2153,7 +2164,7 @@ button.swiper-pagination-bullet {
     padding-top: 73px;
     padding-bottom: 25px; }
     .advantages h2 {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
       font-size: 32px;
       line-height: 32px; }
   .advantages__content-container {

@@ -5,10 +5,68 @@ var imask = window.IMask;
 
 var trainersCards = document.querySelectorAll('.trainers__card');
 var trainers = document.querySelector('.trainers');
-var subscriptionsListItems = document.querySelectorAll('.subscriptions__list-item');
+var subscriptionsSection = document.querySelector('.subscriptions');
+var subscriptionsListItems = subscriptionsSection.querySelectorAll('.subscriptions__list-item');
 var promoBtn = document.querySelector('.promo__btn');
 var reviews = document.querySelector('.reviews');
 var phoneInput = document.querySelector('#user-phone');
+var subscriptionsDurationBlocks = subscriptionsSection.querySelectorAll('.subscriptions__duration');
+
+var findActiveSubscriptionsRadioBtnParent = function () {
+  var subscriptionsRadioBtns = subscriptionsSection.querySelectorAll('input[name="subscription-duration"]');
+
+  for (
+    var subscriptionsRadioBtnIndex = 0;
+    subscriptionsRadioBtnIndex < subscriptionsRadioBtns.length;
+    subscriptionsRadioBtnIndex++
+  ) {
+    if (subscriptionsRadioBtns[subscriptionsRadioBtnIndex].checked) {
+      return subscriptionsRadioBtns[subscriptionsRadioBtnIndex].parentElement;
+    }
+  }
+
+  return null;
+};
+
+var makeSubscriptionsListActive = function (list) {
+  var subscriptionsLists = subscriptionsSection.querySelectorAll('.subscriptions__list');
+
+  for (
+    var subscriptionsListIndex = 0;
+    subscriptionsListIndex < subscriptionsLists.length;
+    subscriptionsListIndex++
+  ) {
+    var currentItem = subscriptionsLists[subscriptionsListIndex];
+
+    if (currentItem.classList.contains('subscriptions__list--active')) {
+      currentItem.classList.remove('subscriptions__list--active');
+    }
+  }
+
+  list.classList.add('subscriptions__list--active');
+};
+
+var onSubscriptionDurationClick = function () {
+  var activeLabel = findActiveSubscriptionsRadioBtnParent();
+  var subscriptionsListOneMonth = subscriptionsSection.querySelector('.subscriptions__list--one-month');
+  var subscriptionsListSixMonths = subscriptionsSection.querySelector('.subscriptions__list--six-months');
+  var subscriptionsListYear = subscriptionsSection.querySelector('.subscriptions__list--year');
+
+  if (activeLabel.classList.contains('subscriptions__duration--one-month')) {
+    makeSubscriptionsListActive(subscriptionsListOneMonth);
+    return;
+  }
+
+  if (activeLabel.classList.contains('subscriptions__duration--six-months')) {
+    makeSubscriptionsListActive(subscriptionsListSixMonths);
+    return;
+  }
+
+  if (activeLabel.classList.contains('subscriptions__duration--year')) {
+    makeSubscriptionsListActive(subscriptionsListYear);
+    return;
+  }
+};
 
 var createMultiSlidesSwiper = function (сontainer) {
   return new Swiper(сontainer, {
@@ -121,4 +179,16 @@ if (reviews) {
 
 if (phoneInput) {
   validatePhone(phoneInput);
+}
+
+if (subscriptionsDurationBlocks) {
+  for (
+    var subscriptionsDurationBlockIndex = 0;
+    subscriptionsDurationBlockIndex < subscriptionsDurationBlocks.length;
+    subscriptionsDurationBlockIndex++
+  ) {
+    var currentItem = subscriptionsDurationBlocks[subscriptionsDurationBlockIndex];
+
+    currentItem.addEventListener('click', onSubscriptionDurationClick);
+  }
 }

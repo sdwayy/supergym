@@ -100,18 +100,35 @@
   }
 }
 
+.subscriptions__lists-container {
+  position: relative;
+}
+
 .subscriptions__list {
   @include list;
   display: flex;
   flex-wrap: wrap;
+  z-index: -1;
 
   li {
     margin-bottom: 10px;
-    margin-right: calc((100% - 353px * 3) / 2);
+    margin-right: 40px;
 
     &:nth-of-type(3n) {
       margin-right: 0;
     }
+  }
+
+  &--six-months,
+  &--year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+
+  &--active {
+    z-index: 1;
   }
 }
 
@@ -119,7 +136,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 353px;
+  width: 360px;
   border: 7px solid transparent;
   padding-top: 55px;
   padding-bottom: 60px;
