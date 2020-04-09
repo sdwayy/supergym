@@ -1609,6 +1609,10 @@ button.swiper-pagination-bullet {
     .subscriptions__list li {
       margin-bottom: 45px;
       margin-right: 0; }
+    .subscriptions__list--six-months, .subscriptions__list--year {
+      width: 100%; }
+    .subscriptions__list--active {
+      z-index: 1; }
   .subscriptions__durations {
     font-size: 18px;
     line-height: 27px; }

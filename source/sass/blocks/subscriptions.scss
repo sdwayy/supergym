@@ -262,6 +262,15 @@
       margin-bottom: 45px;
       margin-right: 0;
     }
+
+    &--six-months,
+    &--year {
+      width: 100%;
+    }
+
+    &--active {
+      z-index: 1;
+    }
   }
 
   .subscriptions__durations {
