@@ -22,7 +22,6 @@
   display: flex;
   width: 560px;
   min-height: 462px;
-  background-color: $second-background-color;
 
   picture {
     width: 50%;
@@ -46,6 +45,7 @@
   padding-right: 45px;
   padding-bottom: 42px;
   color: $second-color;
+  background-color: $second-background-color;
 
   h3 {
     width: 150px;
@@ -146,7 +146,7 @@
 
   .stocks__main-stock {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     margin-bottom: 30px;
     padding-left: 0;
@@ -201,7 +201,7 @@
     padding-top: 73px;
     padding-left: 4.7%;
     padding-right: 4.7%;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 
     h2 {
       font-size: 32px;
@@ -210,14 +210,14 @@
   }
 
   .stocks__main-stock-container {
+    flex-grow: 0;
     width: 290px;
-    margin-right: auto;
-    padding-bottom: 43px;
+    padding-bottom: 41px;
   }
 
   .stocks__main-stock {
     width: 100%;
-    justify-content: center;
+    min-height: 299px;
     flex-wrap: wrap;
     padding: 0;
 
@@ -246,14 +246,20 @@
   }
 
   .stocks__stock-list {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
 
     li {
+      max-width: 580px;
       width: 100%;
       margin-bottom: 30px;
 
       &:first-of-type {
         padding-right: 27px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }

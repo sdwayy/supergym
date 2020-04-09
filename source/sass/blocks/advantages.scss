@@ -36,15 +36,6 @@
 
     &:nth-of-type(2n) {
       margin-right: 0;
-      padding-left: 110px;
-      padding-right: 10px;
-      background-size: 72px 71px;
-      background-position: left 10px top 70px;
-    }
-
-    &:last-of-type,
-    &:nth-last-of-type(2) {
-      border-bottom: none;
     }
   }
 }
@@ -61,6 +52,10 @@
   background-position: left 30px top 70px;
   background-size: 108px 71px;
   background-repeat: no-repeat;
+
+  &--no-border {
+    border-bottom: none;
+  }
 
   h3 {
     margin-top: 0;
@@ -81,6 +76,10 @@
   }
 
   &--parking {
+    padding-left: 110px;
+    padding-right: 10px;
+    background-position: left 10px top 70px;
+    background-size: 72px 71px;
     background-image: url("../img/parking.svg");
   }
 
@@ -91,6 +90,10 @@
   }
 
   &--experience {
+    padding-left: 110px;
+    padding-right: 10px;
+    background-position: left 10px top 70px;
+    background-size: 72px 71px;
     background-image: url("../img/experience.svg");
   }
 }
@@ -153,14 +156,11 @@
       margin-right: calc(100% - 357px * 2);
 
       &:nth-of-type(2n) {
-        padding-left: 95px;
-        background-size: 60px 60px;
-        background-position: 5px 50px;
+        margin-bottom: 240px;
       }
 
-      &:nth-of-type(1),
-      &:nth-of-type(2) {
-        margin-bottom: 240px;
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }
@@ -182,6 +182,13 @@
 
     p {
       max-width: 232px;
+    }
+
+    &--parking,
+    &--experience {
+      padding-left: 95px;
+      background-size: 60px 60px;
+      background-position: 5px 50px;
     }
   }
 
@@ -221,6 +228,9 @@
       line-height: 32px;
     }
   }
+  .advantages__content-container {
+    padding-bottom: 35px;
+  }
 
   .advantages__list {
     flex-direction: column;
@@ -230,19 +240,11 @@
       margin-bottom: 35px;
 
       &:nth-of-type(2n) {
-        padding-left: 0;
-        padding-right: 0;
-        background-size: 60px 60px;
-        background-position: center top 10px;
-      }
-
-      &:nth-of-type(1),
-      &:nth-of-type(2) {
-        margin-bottom: 35px;
-      }
-
-      &:nth-of-type(2) {
         margin-bottom: 325px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }

@@ -1656,7 +1656,7 @@ button.swiper-pagination-bullet {
     line-height: 0;
     font-size: 0; }
   .event img {
-    height: 500px; }
+    height: 100%; }
 
 .event__description-container {
   display: flex;
@@ -1724,8 +1724,7 @@ button.swiper-pagination-bullet {
     .event picture {
       flex-shrink: 0; }
     .event img {
-      width: 386px;
-      height: 292px; }
+      width: 386px; }
   .event__description-container {
     flex-grow: 1;
     justify-content: center;
@@ -1786,8 +1785,8 @@ button.swiper-pagination-bullet {
       width: 290px;
       height: 292px; }
   .event__description-container {
-    width: 290px;
-    margin-right: auto; } }
+    flex-grow: 0;
+    width: 290px; } }
 
 .trainers {
   position: relative;
@@ -2023,13 +2022,7 @@ button.swiper-pagination-bullet {
     margin-right: calc(100% - 350px * 2);
     margin-bottom: 9px; }
     .advantages__list li:nth-of-type(2n) {
-      margin-right: 0;
-      padding-left: 110px;
-      padding-right: 10px;
-      background-size: 72px 71px;
-      background-position: left 10px top 70px; }
-    .advantages__list li:last-of-type, .advantages__list li:nth-last-of-type(2) {
-      border-bottom: none; }
+      margin-right: 0; }
 
 .advantages__list-item {
   display: flex;
@@ -2043,6 +2036,8 @@ button.swiper-pagination-bullet {
   background-position: left 30px top 70px;
   background-size: 108px 71px;
   background-repeat: no-repeat; }
+  .advantages__list-item--no-border {
+    border-bottom: none; }
   .advantages__list-item h3 {
     margin-top: 0;
     margin-bottom: 5px;
@@ -2056,12 +2051,20 @@ button.swiper-pagination-bullet {
   .advantages__list-item--area {
     background-image: url("../img/area.svg"); }
   .advantages__list-item--parking {
+    padding-left: 110px;
+    padding-right: 10px;
+    background-position: left 10px top 70px;
+    background-size: 72px 71px;
     background-image: url("../img/parking.svg"); }
   .advantages__list-item--comfort {
     padding-left: 160px;
     background-image: url("../img/comfort.svg");
     background-position: left 20px top 70px; }
   .advantages__list-item--experience {
+    padding-left: 110px;
+    padding-right: 10px;
+    background-position: left 10px top 70px;
+    background-size: 72px 71px;
     background-image: url("../img/experience.svg"); }
 
 .advantages__center-item {
@@ -2107,11 +2110,9 @@ button.swiper-pagination-bullet {
   .advantages__list li {
     margin-right: calc(100% - 357px * 2); }
     .advantages__list li:nth-of-type(2n) {
-      padding-left: 95px;
-      background-size: 60px 60px;
-      background-position: 5px 50px; }
-    .advantages__list li:nth-of-type(1), .advantages__list li:nth-of-type(2) {
       margin-bottom: 240px; }
+    .advantages__list li:last-of-type {
+      margin-bottom: 0; }
   .advantages__list-item {
     width: 357px;
     padding-top: 42px;
@@ -2126,6 +2127,10 @@ button.swiper-pagination-bullet {
       line-height: 30px; }
     .advantages__list-item p {
       max-width: 232px; }
+    .advantages__list-item--parking, .advantages__list-item--experience {
+      padding-left: 95px;
+      background-size: 60px 60px;
+      background-position: 5px 50px; }
   .advantages__center-item {
     position: absolute;
     top: 161px;
@@ -2151,20 +2156,17 @@ button.swiper-pagination-bullet {
       margin-bottom: 45px;
       font-size: 32px;
       line-height: 32px; }
+  .advantages__content-container {
+    padding-bottom: 35px; }
   .advantages__list {
     flex-direction: column; }
     .advantages__list li {
       margin-right: 0;
       margin-bottom: 35px; }
       .advantages__list li:nth-of-type(2n) {
-        padding-left: 0;
-        padding-right: 0;
-        background-size: 60px 60px;
-        background-position: center top 10px; }
-      .advantages__list li:nth-of-type(1), .advantages__list li:nth-of-type(2) {
-        margin-bottom: 35px; }
-      .advantages__list li:nth-of-type(2) {
         margin-bottom: 325px; }
+      .advantages__list li:last-of-type {
+        margin-bottom: 0; }
   .advantages__list-item {
     align-items: center;
     width: 100%;
@@ -2213,8 +2215,7 @@ button.swiper-pagination-bullet {
 .stocks__main-stock {
   display: flex;
   width: 560px;
-  min-height: 462px;
-  background-color: #ed0233; }
+  min-height: 462px; }
   .stocks__main-stock picture {
     width: 50%; }
   .stocks__main-stock img {
@@ -2231,7 +2232,8 @@ button.swiper-pagination-bullet {
   padding-left: 45px;
   padding-right: 45px;
   padding-bottom: 42px;
-  color: #ffffff; }
+  color: #ffffff;
+  background-color: #ed0233; }
   .stocks__main-stock-container h3 {
     width: 150px;
     margin: 0;
@@ -2342,7 +2344,7 @@ button.swiper-pagination-bullet {
     padding-bottom: 40px; }
   .stocks__main-stock {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     margin-bottom: 30px;
     padding-left: 0; }
@@ -2375,17 +2377,17 @@ button.swiper-pagination-bullet {
     padding-top: 73px;
     padding-left: 4.7%;
     padding-right: 4.7%;
-    padding-bottom: 20px; }
+    padding-bottom: 40px; }
     .stocks h2 {
       font-size: 32px;
       line-height: 32px; }
   .stocks__main-stock-container {
+    flex-grow: 0;
     width: 290px;
-    margin-right: auto;
-    padding-bottom: 43px; }
+    padding-bottom: 41px; }
   .stocks__main-stock {
     width: 100%;
-    justify-content: center;
+    min-height: 299px;
     flex-wrap: wrap;
     padding: 0; }
     .stocks__main-stock h3 {
@@ -2402,12 +2404,16 @@ button.swiper-pagination-bullet {
       width: 290px;
       height: 299px; }
   .stocks__stock-list {
-    flex-direction: column; }
+    flex-wrap: wrap;
+    justify-content: center; }
     .stocks__stock-list li {
+      max-width: 580px;
       width: 100%;
       margin-bottom: 30px; }
       .stocks__stock-list li:first-of-type {
         padding-right: 27px; }
+      .stocks__stock-list li:last-of-type {
+        margin-bottom: 0; }
   .stocks__stock {
     padding-top: 35px;
     padding-bottom: 38px;
@@ -2534,7 +2540,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 767px) {
   .reviews {
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 68px; }
     .reviews h2 {
       margin-bottom: 42px;
