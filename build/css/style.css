@@ -1567,11 +1567,11 @@ button.swiper-pagination-bullet {
   .subscriptions::after {
     content: "";
     bottom: -8%;
-    right: -2%;
+    right: 0;
     width: 360px;
     height: 490px;
     background-size: 347px 444px;
-    background-position: left bottom 16px; }
+    background-position: right 2px bottom 16px; }
   .no-webp .subscriptions::after {
     background-image: url("../img/weights-tablet.png"); } }
   @media (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
