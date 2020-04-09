@@ -2748,6 +2748,7 @@ button.swiper-pagination-bullet {
       font-size: 20px;
       line-height: 30px; }
   .address__content-container {
+    max-width: unset;
     width: 559px;
     padding-left: 27px;
     column-gap: 97px; }
