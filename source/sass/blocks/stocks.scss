@@ -27,6 +27,10 @@
   picture {
     width: 50%;
   }
+
+  img {
+    height: 462px;
+  }
 }
 
 .stocks__content-container {
@@ -203,11 +207,6 @@
       font-size: 32px;
       line-height: 32px;
     }
-
-    img {
-      width: 290px;
-      height: 299px;
-    }
   }
 
   .stocks__main-stock-container {
@@ -241,7 +240,8 @@
     }
 
     img {
-      height: 100%;
+      width: 290px;
+      height: 299px;
     }
   }
 

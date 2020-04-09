@@ -175,7 +175,8 @@
     stroke:#afafaf;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     translate: $transition-time;
 
     svg {
@@ -188,14 +189,6 @@
 
     svg {
       stroke: #afafaf;
-    }
-  }
-
-  &:focus {
-    translate: $transition-time;
-
-    svg {
-      stroke: $second-background-color;
     }
   }
 }

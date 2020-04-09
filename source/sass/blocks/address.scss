@@ -47,7 +47,8 @@
 
 .address__content-container {
   position: relative;
-  width: 500px;
+  width: 96.5%;
+  max-width: 500px;
   padding-left: 4px;
   font-style: normal;
 
@@ -118,7 +119,7 @@
     padding-top: 73px;
     padding-left: $mobile-padding;
     padding-right: $mobile-padding;
-    padding-bottom: 43px;
+    padding-bottom: 40px;
 
     h2 {
       margin-left: 0;

@@ -1,6 +1,6 @@
 .subscriptions {
   position: relative;
-  background-color: #d4d7e1;
+  background-color: #f8f9fc;
 
   &::after {
     content: "";
@@ -263,8 +263,6 @@
 
 @media (max-width: $mobile-width-max) {
   .subscriptions {
-    background-color: #f8f9fc;
-
     &::after {
       display: none;
     }

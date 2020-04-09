@@ -2,12 +2,16 @@
   display: flex;
   justify-content: space-between;
   width: 1157px;
-  background-color: $second-background-color;
-
+  padding-top: 130px;
+  padding-bottom: 60px;
 
   picture {
     line-height: 0;
     font-size: 0;
+  }
+
+  img {
+    height: 500px;
   }
 }
 
@@ -20,6 +24,7 @@
   padding-left: 78px;
   padding-right: 75px;
   padding-bottom: 85px;
+  background-color: $second-background-color;
 
   h2 {
     width: 240px;
@@ -86,6 +91,8 @@
 @media (max-width: $tablet-width-max) {
   .event {
     width: 88.4%;
+    padding-top: 105px;
+    padding-bottom: 50px;
 
     picture {
       flex-shrink: 0;
@@ -169,7 +176,8 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 90.4%;
-
+    padding-top: 65px;
+    padding-bottom: 35px;
 
     img {
       width: 290px;

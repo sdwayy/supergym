@@ -2,7 +2,6 @@
 
 var Swiper = window.Swiper;
 var imask = window.IMask;
-var $ = window.$;
 
 var trainersCards = document.querySelectorAll('.trainers__card');
 var trainers = document.querySelector('.trainers');
@@ -29,13 +28,11 @@ var createMultiSlidesSwiper = function (сontainer) {
         slidesPerGroup: 1,
         spaceBetween: 30
       },
-      // when window width is >= 480px
       768: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 30
       },
-      // when window width is >= 640px
       1200: {
         slidesPerView: 4,
         slidesPerGroup: 4,
@@ -62,18 +59,24 @@ var validatePhone = function (input) {
   });
 };
 
-var onAnchorClick = function (anchor) {
-  var block = $(anchor).attr('href');
+var scrollToAnchor = function (anchor) {
+  var anchorId = anchor.getAttribute('href').substr(1);
 
-  $('html, body').animate({scrollTop: $(block).offset().top + 'px'});
+  document.getElementById(anchorId).scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 };
 
 if (promoBtn) {
   var onPromoBtnClick = function () {
-    onAnchorClick(promoBtn);
+    scrollToAnchor(promoBtn);
   };
 
-  promoBtn.addEventListener('click', onPromoBtnClick);
+  promoBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    onPromoBtnClick();
+  });
 }
 
 if (subscriptionsListItems.length > 0) {

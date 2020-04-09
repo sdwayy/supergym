@@ -1,5 +1,6 @@
 .trainers {
   position: relative;
+  padding-top: 60px;
   padding-bottom: 120px;
   padding-left: 20px;
   padding-right: 20px;
@@ -45,7 +46,7 @@
 .trainers__btn-arrow {
   width: 20px;
   height: 32px;
-  top: calc(49px + 50px + (294px / 2) - 14px);
+  top: calc(49px + 50px + (294px / 2) - 14px + 60px);
   padding: 0;
   border: 0;
   background-color: transparent;
@@ -147,8 +148,25 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .trainers__list-container {
+    width: 92%;
+  }
+
+  .trainers__btn-arrow {
+    &--left {
+      left: 2%;
+    }
+
+    &--right {
+      right: 2%;
+    }
+  }
+}
+
 @media (max-width: $tablet-width-max) {
   .trainers {
+    padding-top: 50px;
     padding-bottom: 100px;
     text-align: center;
 
@@ -204,7 +222,7 @@
   }
 
   .trainers__btn-arrow {
-    top: calc(42px + 38px + (294px / 2) - 16px);
+    top: calc(42px + 38px + (294px / 2) - 16px + 50px);
 
     &--left {
       left: calc(50% - 565px / 2 - 58px);
@@ -218,6 +236,7 @@
 
 @media (max-width: $mobile-width-max) {
   .trainers {
+    padding-top: 35px;
     padding-bottom: 70px;
 
     h2 {
@@ -273,7 +292,7 @@
   }
 
   .trainers__btn-arrow {
-    top: 50.5%;
+    top: 55%;
     width: 12px;
     height: 25px;
     transform: translateY(-50.5%);

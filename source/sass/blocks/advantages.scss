@@ -97,7 +97,7 @@
 
 .advantages__center-item {
   position: absolute;
-  top: 70px;
+  top: calc(50% - 20px);
   left: 50%;
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@
   color: $second-color;
   text-align: center;
   background-color: #1c3374;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
 
   h3 {
@@ -216,7 +216,7 @@
     padding-bottom: 25px;
 
     h2 {
-      margin-bottom: 40px;
+      margin-bottom: 45px;
       font-size: 32px;
       line-height: 32px;
     }

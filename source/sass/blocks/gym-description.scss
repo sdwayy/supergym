@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 235px;
   padding-right: 20px;
   padding-left: $desktop-fixed-padding;
   color: $description-font-color;
@@ -48,7 +48,11 @@
   }
 
   img[alt="Фото тренажерного зала"] {
-    padding-bottom: 115px;
+    height: 401px;
+  }
+
+  img[alt="Превью"] {
+    height: 228px;
   }
 }
 
@@ -136,7 +140,7 @@
   .gym-description {
     flex-direction: column;
     align-items: center;
-    padding: 100px $tablet-padding;
+    padding: 100px $tablet-padding 180px;
     background-size: 88.1% auto;
     background-position: center top calc(200px + 23.8%);
 
@@ -167,7 +171,12 @@
 
     img[alt="Фото тренажерного зала"] {
       width: 678px;
-      padding-bottom: 85px;
+      height: 345px;
+      padding-bottom: 0;
+    }
+
+    img[alt="Превью"] {
+      height: 167px;
     }
   }
 
