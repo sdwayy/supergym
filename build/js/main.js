@@ -9,7 +9,6 @@ var subscriptionsSection = document.querySelector('.subscriptions');
 var subscriptionsListItems = subscriptionsSection.querySelectorAll('.subscriptions__list-item');
 var promoBtn = document.querySelector('.promo__btn');
 var reviews = document.querySelector('.reviews');
-var phoneInput = document.querySelector('#user-phone');
 var subscriptionsDurationBlocks = subscriptionsSection.querySelectorAll('.subscriptions__duration');
 
 var findActiveSubscriptionsRadioBtnParent = function () {
@@ -189,7 +188,7 @@ if (phoneInput) {
     } else {
       phoneInput.setCustomValidity('');
     }
-  }
+  };
 
   phoneInput.addEventListener('input', onPhoneInput);
 }
