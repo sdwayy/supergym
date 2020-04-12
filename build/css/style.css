@@ -1865,11 +1865,13 @@ button.swiper-pagination-bullet {
     line-height: 0; }
   .trainers__card img {
     height: 294px; }
-  .trainers__card:hover > h3 {
-    z-index: 0; }
   .trainers__card:hover .trainers__description {
     z-index: 0;
     visibility: visible; }
+  .trainers__card:hover > h3 {
+    font-size: 18px;
+    line-height: 27px;
+    transform: translateY(-193px); }
   .trainers__card > h3 {
     position: relative;
     margin: 0;
@@ -1886,7 +1888,7 @@ button.swiper-pagination-bullet {
   left: 50%;
   width: 260px;
   height: 100%;
-  padding-top: 55px;
+  padding-top: 78px;
   background-color: rgba(16, 38, 84, 0.89);
   transform: translateX(-50%);
   z-index: -1;
@@ -1894,9 +1896,9 @@ button.swiper-pagination-bullet {
   .trainers__description h3 {
     margin: 0;
     text-align: center; }
-  .trainers__description h3 + span {
+  .trainers__description span {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
     color: #b6bdcc;
     text-align: center; }
 
@@ -1937,15 +1939,16 @@ button.swiper-pagination-bullet {
       margin-left: 7px;
       font-size: 18px;
       line-height: 27px; }
-    .trainers__card h3 + span {
-      margin-bottom: 32px;
-      margin-left: -7px; }
+    .trainers__card:hover > h3 {
+      transform: translate(-8px, -195px); }
   .trainers__description {
     width: 268px;
     height: 294px;
-    padding-top: 50px; }
-    .trainers__description h3 {
-      margin-left: -7px; }
+    padding-top: 74px; }
+    .trainers__description span {
+      display: inline-block;
+      margin-left: -10px;
+      vertical-align: baseline; }
   .trainers__list-container {
     width: 565px; }
   .trainers__achievements {
@@ -1977,13 +1980,11 @@ button.swiper-pagination-bullet {
   .trainers__description {
     width: 226px;
     height: 274px;
-    padding-top: 42px; }
+    padding-top: 64px; }
     .trainers__description h3 {
       margin-left: 0; }
-    .trainers__description h3 + span {
-      margin-left: 0;
-      margin-bottom: 31px;
-      color: #b6bdcc; }
+    .trainers__description span {
+      margin-left: 0; }
   .trainers__achievements {
     padding-left: 50px;
     font-size: 14px;
@@ -1995,6 +1996,8 @@ button.swiper-pagination-bullet {
   .trainers__card {
     padding-top: 230px;
     height: 274px; }
+    .trainers__card:hover > h3 {
+      transform: translate(-5px, -190px); }
   .trainers__btn-arrow {
     top: 55%;
     width: 12px;

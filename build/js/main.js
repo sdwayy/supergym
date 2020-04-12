@@ -3,7 +3,7 @@
 var Swiper = window.Swiper;
 var imask = window.IMask;
 
-var trainersCards = document.querySelectorAll('.trainers__card');
+var phoneInput = document.querySelector('#user-phone');
 var trainers = document.querySelector('.trainers');
 var subscriptionsSection = document.querySelector('.subscriptions');
 var subscriptionsListItems = subscriptionsSection.querySelectorAll('.subscriptions__list-item');
@@ -157,21 +157,6 @@ if (trainers) {
   createMultiSlidesSwiper('.trainers__list-container');
 }
 
-if (trainersCards.length > 0) {
-  for (
-    var trainerCardIndex = 0;
-    trainerCardIndex < trainersCards.length;
-    trainerCardIndex++
-  ) {
-    var trainerCard = trainersCards[trainerCardIndex];
-    var trainerName = trainerCard.querySelector('h3');
-    var trainerDescription = trainerCard.querySelector('.trainers__description');
-    var trainerNameBlockCopy = trainerName.cloneNode(true);
-
-    trainerDescription.insertBefore(trainerNameBlockCopy, trainerDescription.firstChild);
-  }
-}
-
 if (reviews) {
   reviews.classList.remove('reviews--no-js');
   createMonoSlideSwiper('.reviews__container');
@@ -191,4 +176,20 @@ if (subscriptionsDurationBlocks) {
 
     currentItem.addEventListener('click', onSubscriptionDurationClick);
   }
+}
+
+if (phoneInput) {
+  var onPhoneInput = function (evt) {
+    evt.preventDefault();
+    var phoneInputLength = phoneInput.value.length;
+    var minInputLength = 16;
+
+    if (phoneInputLength < minInputLength) {
+      phoneInput.setCustomValidity('Минимальное количество символов - 16');
+    } else {
+      phoneInput.setCustomValidity('');
+    }
+  }
+
+  phoneInput.addEventListener('input', onPhoneInput);
 }
