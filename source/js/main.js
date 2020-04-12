@@ -10,6 +10,7 @@ var subscriptionsListItems = subscriptionsSection.querySelectorAll('.subscriptio
 var promoBtn = document.querySelector('.promo__btn');
 var reviews = document.querySelector('.reviews');
 var subscriptionsDurationBlocks = subscriptionsSection.querySelectorAll('.subscriptions__duration');
+var imagesSources = document.querySelectorAll('source');
 
 var findActiveSubscriptionsRadioBtnParent = function () {
   var subscriptionsRadioBtns = subscriptionsSection.querySelectorAll('input[name="subscription-duration"]');
@@ -116,6 +117,28 @@ var validatePhone = function (input) {
   });
 };
 
+var checkUserAgent = function () {
+  var ua = navigator.userAgent;
+
+  if (ua.search(/MSIE/) > 0) {
+    return 'Internet Explorer';
+  }
+
+  if (ua.search(/Firefox/) > 0) {
+    return 'Firefox';
+  }
+
+  if (ua.search(/Chrome/) > 0) {
+    return 'Google Chrome';
+  }
+
+  if (ua.search(/Safari/) > 0) {
+    return 'Safari';
+  }
+
+  return 'other';
+};
+
 var scrollToAnchor = function (anchor) {
   var anchorId = anchor.getAttribute('href').substr(1);
 
@@ -191,4 +214,15 @@ if (phoneInput) {
   };
 
   phoneInput.addEventListener('input', onPhoneInput);
+}
+
+if (checkUserAgent() === 'Safari') {
+  for (
+    var imageIndex = 0;
+    imageIndex < imagesSources.length;
+    imageIndex++
+  ) {
+    var imageSrc = imagesSources[imageIndex].srcset;
+    imagesSources[imageIndex].srcset = imageSrc.replace(/.webp/gi, '.jpg');
+  }
 }
