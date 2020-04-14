@@ -1267,10 +1267,8 @@ button.swiper-pagination-bullet {
     line-height: 0; }
   .gym-description picture:first-of-type {
     margin-left: auto; }
-  .gym-description img[alt="Фото тренажерного зала"] {
+  .gym-description img {
     height: 401px; }
-  .gym-description img[alt="Превью"] {
-    height: 228px; }
 
 .gym-description__description {
   width: 355px;
@@ -1306,6 +1304,8 @@ button.swiper-pagination-bullet {
     height: 100%;
     background-color: rgba(20, 54, 122, 0.5);
     z-index: 1; }
+  .gym-description__video img {
+    height: 228px; }
 
 .gym-description__play-btn {
   position: absolute;
@@ -1355,12 +1355,10 @@ button.swiper-pagination-bullet {
       margin-bottom: 37px; }
     .gym-description picture:first-of-type {
       margin-left: unset; }
-    .gym-description img[alt="Фото тренажерного зала"] {
+    .gym-description img {
       width: 678px;
       height: 345px;
       padding-bottom: 0; }
-    .gym-description img[alt="Превью"] {
-      height: 167px; }
   .gym-description__description {
     display: flex;
     flex-direction: column;
@@ -1374,6 +1372,8 @@ button.swiper-pagination-bullet {
     width: 266px;
     height: 167px;
     transform: translateX(-50%); }
+    .gym-description__video img {
+      height: 167px; }
   .gym-description__play-btn {
     width: 73px;
     height: 73px; } }
@@ -1393,14 +1393,11 @@ button.swiper-pagination-bullet {
     .gym-description h2 + p {
       margin-bottom: 25px;
       padding: 0; }
-    .gym-description img[alt="Фото тренажерного зала"] {
+    .gym-description img {
       width: 320px;
-      height: 313px;
-      margin-bottom: 40px;
-      padding-bottom: 0; }
-    .gym-description img[alt="Превью"] {
-      width: 320px;
-      height: 167px; }
+      height: 313px; }
+    .gym-description > picture {
+      margin-bottom: 40px; }
   .gym-description__description {
     align-items: flex-start;
     max-width: 541px;
@@ -1413,7 +1410,10 @@ button.swiper-pagination-bullet {
     left: unset;
     width: 320px;
     margin: 0;
-    transform: unset; } }
+    transform: unset; }
+    .gym-description__video img {
+      width: 320px;
+      height: 167px; } }
 
 .subscriptions {
   position: relative;

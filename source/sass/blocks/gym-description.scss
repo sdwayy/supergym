@@ -47,12 +47,8 @@
     margin-left: auto;
   }
 
-  img[alt="Фото тренажерного зала"] {
+  img {
     height: 401px;
-  }
-
-  img[alt="Превью"] {
-    height: 228px;
   }
 }
 
@@ -100,6 +96,10 @@
     height: 100%;
     background-color: rgba(20, 54, 122, 0.5);
     z-index: 1;
+  }
+
+  img {
+    height: 228px;
   }
 }
 
@@ -169,14 +169,10 @@
       margin-left: unset;
     }
 
-    img[alt="Фото тренажерного зала"] {
+    img {
       width: 678px;
       height: 345px;
       padding-bottom: 0;
-    }
-
-    img[alt="Превью"] {
-      height: 167px;
     }
   }
 
@@ -195,6 +191,10 @@
     width: 266px;
     height: 167px;
     transform: translateX(-50%);
+
+    img {
+      height: 167px;
+    }
   }
 
   .gym-description__play-btn {
@@ -225,16 +225,13 @@
       padding: 0;
     }
 
-    img[alt="Фото тренажерного зала"] {
+    img {
       width: 320px;
       height: 313px;
-      margin-bottom: 40px;
-      padding-bottom: 0;
     }
 
-    img[alt="Превью"] {
-      width: 320px;
-      height: 167px;
+    & > picture {
+      margin-bottom: 40px;
     }
   }
 
@@ -253,5 +250,10 @@
     width: 320px;
     margin: 0;
     transform: unset;
+
+    img {
+      width: 320px;
+      height: 167px;
+    }
   }
 }
