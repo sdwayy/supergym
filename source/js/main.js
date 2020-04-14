@@ -216,13 +216,13 @@ if (phoneInput) {
   phoneInput.addEventListener('input', onPhoneInput);
 }
 
-if (checkUserAgent() === 'Safari') {
+if (checkUserAgent() === 'Safari' || checkUserAgent() === 'Internet Explorer') {
   for (
-    var imageIndex = 0;
-    imageIndex < imagesSources.length;
-    imageIndex++
+    var imageSourceIndex = 0;
+    imageSourceIndex < imagesSources.length;
+    imageSourceIndex++
   ) {
-    var imageSrc = imagesSources[imageIndex].srcset;
-    imagesSources[imageIndex].srcset = imageSrc.replace(/.webp/gi, '.jpg');
+    var imageSrc = imagesSources[imageSourceIndex].srcset;
+    imagesSources[imageSourceIndex].srcset = imageSrc.replace(/.webp/gi, '.jpg');
   }
 }
