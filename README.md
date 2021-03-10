@@ -1,5 +1,6 @@
 # Supergym
-Adaptive and retina, lighthouse, crossBrowser optimized landing page.
+Лендинг с отзывчивой и кроссбраузерной версткой, оптимизированный под ретину и Lighthouse метрики.
+
 > [Preview link](https://sdwayy.github.io/supergym/)
 
 ## Stack:
